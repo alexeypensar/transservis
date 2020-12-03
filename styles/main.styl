@@ -16,6 +16,7 @@ html, body {
 	font-size: 16px;
 	font-weight: 400;
 	color: $color-black;
+	line-height: 1.5;
 
 }
 
@@ -29,3 +30,80 @@ html, body {
 }
 
 
+.header__nav {
+	padding-top: 28px;
+	padding-bottom: 22px;
+}
+
+.header__ul {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__li {
+	height: 35px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__li, .header__link {
+	display: flex;
+}
+
+.header__link_logo {
+	margin-right: 105px;
+}
+
+.header__link_phone {
+	margin-left: 50px;
+	padding-left: 15px;
+	position: relative;
+	font-weight: 500;
+	font-size: 20px;
+	&::before {
+		position: absolute;
+		content: url('../img/icons/header-phone.svg');
+		top: 5px;
+		left: -12px;
+	}
+}
+
+.header__link {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $color-black;
+}
+
+.header__link_arrow {
+	position: relative;
+	padding-right: 8px;
+	&::after {
+		content: url('../img/icons/arrow-down.svg');
+		position: absolute;
+		top: -3px;
+		right: -10px;
+	}
+}
+
+
+
+.header__link_callback {
+	font-weight: 500;
+	position: relative;
+	top: 1px;
+	{$text-gradient};
+
+	&::after {
+		position: absolute;
+		content: '';
+		height: 1px;
+		width: 100%;
+		background: $blue-gradient;
+		bottom: -2px;
+	}
+
+}
