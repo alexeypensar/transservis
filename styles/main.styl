@@ -109,8 +109,31 @@ html, body {
 
 }
 
+//.header__content {
+//	display: flex;
+//	flex-direction: row;
+//
+//}
+
 .header_left {
 	padding-top: 115px;
+}
+
+.header {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.header_right {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	height: 553px;
+	width: 980px;
+	& img {
+		object-fit: cover;
+	}
 }
 
 .header__h1 {
@@ -155,4 +178,18 @@ html, body {
 .header__advantages {
 	margin-top: 52px;
 
+}
+
+.header__advantage {
+	padding-left: 30px;
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+	&::before {
+		position: absolute;
+		content: url('../img/icons/header-check.svg');
+		left: 0;
+		top: 1px;
+	}
 }
