@@ -81,6 +81,7 @@ html, body {
 .header__link_arrow {
 	position: relative;
 	padding-right: 8px;
+	margin-right: 8px;
 	&::after {
 		content: url('../img/icons/arrow-down.svg');
 		position: absolute;
@@ -105,5 +106,53 @@ html, body {
 		background: $blue-gradient;
 		bottom: -2px;
 	}
+
+}
+
+.header_left {
+	padding-top: 115px;
+}
+
+.header__h1 {
+	font-weight: 700;
+	font-size: 42px;
+	text-transform: uppercase;
+	margin-bottom: 17px;
+}
+
+.header__h1_blue {
+	color: $color-blue;
+
+}
+
+.header__h2 {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 40px;
+}
+
+
+.main-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 280px;
+	height: 70px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background-color: $color-red;
+	border: none;
+	outline: none;
+	font-weight: 600;
+	box-shadow: 0 12px 25px -12px $color-red;
+	border-radius: 4px;
+	& img {
+		margin-left: 20px;
+	}
+
+}
+
+.header__advantages {
+	margin-top: 52px;
 
 }

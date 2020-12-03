@@ -48,6 +48,10 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   overflow: hidden;
 }
+button:hover,
+button:focus {
+  cursor: pointer;
+}
 @media screen and (max-width: 1439.98px) {
   .container {
     max-width: 1200px;
@@ -132,6 +136,7 @@ body {
 .header__link_arrow {
   position: relative;
   padding-right: 8px;
+  margin-right: 8px;
 }
 .header__link_arrow::after {
   content: url("../img/icons/arrow-down.svg");
@@ -154,4 +159,42 @@ body {
   width: 100%;
   background: linear-gradient(to right, #133975 0%, #0b1f3e 100%);
   bottom: -2px;
+}
+.header_left {
+  padding-top: 115px;
+}
+.header__h1 {
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+.header__h1_blue {
+  color: #1c79ce;
+}
+.header__h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 70px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d83339;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  box-shadow: 0 12px 25px -12px #d83339;
+  border-radius: 4px;
+}
+.main-button img {
+  margin-left: 20px;
+}
+.header__advantages {
+  margin-top: 52px;
 }
