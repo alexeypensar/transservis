@@ -428,3 +428,62 @@ body {
   width: 547px;
   margin-top: 40px;
 }
+.about-us {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.about-us__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-us__content {
+  margin-left: 10px;
+  background: url("../img/about-us--map.png") no-repeat center center;
+  height: 525px;
+  width: 525px;
+  padding: 120px 20px 120px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.about-us__heading {
+  font-weight: 700;
+  font-size: 42px;
+  color: #1c79ce;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+.about-us__text {
+  margin-bottom: 70px;
+}
+.about-us__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  color: #d83339;
+  text-transform: uppercase;
+}
+.about-us__link img {
+  padding-left: 18px;
+}
+.about-us__numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about-us__number {
+  width: 30%;
+}
+.about-us__number span {
+  font-weight: 800;
+  font-size: 80px;
+  color: #1c79ce;
+  line-height: 1;
+}
