@@ -74,8 +74,48 @@
 
 </header>
 
-
 <main>
+    <section class="calculator__wrapper">
+        <div class="calculator container">
+
+            <h2 class="calculator__heading">Рассчитайте стоимость перевозки прямо сейчас!</h2>
+
+            <div class="calculator__inputs calculator__inputs_top">
+                <input type="text" class="calculator__input calculator__input_split" placeholder="Откуда">
+                <img src="img/icons/calculator-arrows.svg" alt="стрелки">
+                <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">
+                <div class="calculator__inputs_numbers">
+                    <input type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
+                          step="1">
+                    <input type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
+                           step="0.01">
+                </div>
+            </div>
+            <label class="calculator__label" for="calculatorLength">Габариты самого большого места</label>
+            <div class="calculator__inputs calculator__inputs_bottom">
+
+                <div class="calculator__inputs_numbers">
+                    <input type="number" class="calculator__input calculator__input_length" placeholder="Длина (м)"
+                          step="0.01" id="calculatorLength">
+                    <input type="number" class="calculator__input calculator__input_width" placeholder="Ширина (м)"
+                           step="0.01">
+                    <input type="number" class="calculator__input calculator__input_height" placeholder="Высота (м)"
+                           step="0.01">
+                </div>
+
+                <button class="main-button" type="button">Рассчитать
+                    <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
+                </button>
+            </div>
+
+            
+            
+        </div>
+        
+        <div class="pricelist container">
+            <p class="pricelist__text">Или посмотрите наш <a href="#">прайс-лист</a></p>
+        </div>
+    </section>
 
 </main>
 
