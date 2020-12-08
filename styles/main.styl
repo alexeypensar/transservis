@@ -381,3 +381,70 @@ html, body {
 	padding-bottom: 65px;
 	background-color: $color-lightgray;
 }
+
+.services_top, .services_bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.services_bottom {
+	margin-top: 30px;
+}
+
+.services__item {
+	background-color: #FFFFFF;
+	position: relative;
+	width: 278px;
+	height: 283px;
+	padding: 31px 22px;
+	border: 1px solid $color-border;
+
+	& .services__heading {
+		width: 60%;
+	}
+
+	& img {
+		position: absolute;
+		bottom: 22px;
+		right: 22px;
+	}
+
+	&_large {
+		padding: 60px 45px;
+		width: 585px;
+		height: 280px;
+
+		& .services__heading {
+			font-weight: 500;
+			font-size: 32px;
+			line-height: 1;
+			width: 100%;
+		}
+
+		& img {
+			position: absolute;
+			bottom: 42px;
+			right: 42px;
+		}
+	}
+
+
+}
+
+.services__heading {
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 150%;
+
+	&:first-letter {
+		color: $color-red;
+	}
+}
+
+
+.services__info {
+	width: 547px;
+	margin-top: 40px;
+}
