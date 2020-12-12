@@ -226,8 +226,11 @@
             <img src="img/about-us.jpg" alt="самолет">
             <article class="about-us__content">
                 <h2 class="about-us__heading">Транс-Сервис</h2>
-                <p class="about-us__text">ООО “Транс-сервис” - стабильная компания, которая работает для вас с 2005 года. Мы зарекомендовали себя как надеждного и долгосрочного партнера. Будем рады видеть вас в рядах наших клиентов!</p>
-                <a href="#" class="about-us__link">подробнее<img src="img/icons/arrow-right-red.svg" alt="стрелка вправо">
+                <p class="about-us__text">ООО “Транс-сервис” - стабильная компания, которая работает для вас с 2005
+                    года. Мы зарекомендовали себя как надеждного и долгосрочного партнера. Будем рады видеть вас в рядах
+                    наших клиентов!</p>
+                <a href="#" class="about-us__link">подробнее<img src="img/icons/arrow-right-red.svg"
+                                                                 alt="стрелка вправо">
                 </a>
             </article>
         </div>
@@ -264,10 +267,10 @@
 
         <div class="calculator__inputs_numbers callback__inputs">
 
-                <input type="text" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
-                      step="1">
-                <input type="tel" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
-                       step="0.01">
+            <input type="text" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
+                   step="1">
+            <input type="tel" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
+                   step="0.01">
 
 
             <button class="main-button" type="submit">Отправить
@@ -275,11 +278,66 @@
             </button>
         </div>
 
-        <p class="callback__text">Заполняя эту форму, вы соглашаетесь с <a href="policy.html" class="callback__link">политикой хранения и обработкой ваших персональных данных</a></p>
-
-
+        <p class="callback__text">Заполняя эту форму, вы соглашаетесь с <a href="policy.html" class="callback__link">политикой
+            хранения и обработкой ваших персональных данных</a></p>
 
     </form>
+
+    <section class="our-clients container">
+
+        <h2 class="section__heading">Нам <span>доверяют</span></h2>
+
+        <button class="embla__button embla__button_prev" id="emblaButtonPrev">
+            <img src="img/icons/embla-arrow-left.svg" alt="">
+        </button>
+
+        <div class="embla" id="embla">
+
+            <div class="embla__container">
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/1.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/2.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/3.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/4.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/1.png" alt="">
+                </div>
+
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/2.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/3.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/4.png" alt="">
+                </div>
+
+
+            </div>
+
+        </div>
+        <button class="embla__button embla__button_next" id="emblaButtonNext">
+            <img src="img/icons/embla-arrow-right.svg" alt="">
+        </button>
+
+
+    </section>
 
 </main>
 
@@ -287,6 +345,67 @@
 
 </footer>
 
+<script src="https://unpkg.com/embla-carousel@latest/embla-carousel.umd.js">
+</script>
+
+
+<script>
+    var emblaNode = document.getElementById("embla");
+    const options = {
+        loop: "true",
+        align: "start"
+    }
+    var embla = EmblaCarousel(emblaNode, options);
+
+    var prevEmbla = document.getElementById('emblaButtonPrev');
+    prevEmbla.addEventListener('click', embla.scrollPrev);
+    var nextEmbla = document.getElementById('emblaButtonNext');
+    nextEmbla.addEventListener('click', embla.scrollNext);
+
+
+    var autoplay = function autoplay(embla, interval) {
+        var timer = 0;
+
+        var play = function play() {
+            stop();
+            requestAnimationFrame(function () {
+                return timer = window.setTimeout(next, interval);
+            });
+        };
+
+        var stop = function stop() {
+            window.clearTimeout(timer);
+            timer = 0;
+        };
+
+        var next = function next() {
+            if (embla.canScrollNext()) {
+                embla.scrollNext();
+            } else {
+                embla.scrollTo(0);
+            }
+
+            play();
+        };
+
+        return {
+            play: play,
+            stop: stop
+        };
+    };
+
+    var autoplayer = autoplay(embla, 3000);
+    embla.on("pointerDown", autoplayer.stop);
+    embla.on("init", autoplayer.play);
+
+
+    var emblaButtons = Array.from(document.getElementsByClassName('embla__button'));
+    emblaButtons.forEach(function (el) {
+        el.addEventListener('click', function () {
+            el.blur();
+        });
+    });
+</script>
 
 <script src="js/script.js"></script>
 </body>
