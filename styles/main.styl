@@ -520,7 +520,64 @@ html, body {
 		line-height: 1;
 	}
 
-	& p {
+}
 
+.callback {
+	margin-top: 65px;
+	margin-bottom: 65px;
+	width: 100%;
+	//height: 350px;
+	background: $blue-gradient;
+	border-radius: 4px;
+	padding: 60px 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.callback__heading {
+	margin-bottom: 32px;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.callback__inputs {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	//justify-content: space-between;
+	margin-bottom: 20px;
+
+	& input {
+		width: 38%;
+		margin-right: 0;
+	}
+
+	& .main-button {
+		width: 220px;
+		margin-left: 30px;
+	}
+}
+
+.callback__text, .callback__link {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+	
+.callback__link {
+	text-decoration: none;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		bottom: -3px;
+		left: 0;
+		height: 1px;
+		background-color: $color-gray;
 	}
 }

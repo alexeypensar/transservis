@@ -487,3 +487,54 @@ body {
   color: #1c79ce;
   line-height: 1;
 }
+.callback {
+  margin-top: 65px;
+  margin-bottom: 65px;
+  width: 100%;
+  background: linear-gradient(to right, #133975 0%, #0b1f3e 100%);
+  border-radius: 4px;
+  padding: 60px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.callback__heading {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #fff;
+}
+.callback__inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.callback__inputs input {
+  width: 38%;
+  margin-right: 0;
+}
+.callback__inputs .main-button {
+  width: 220px;
+  margin-left: 30px;
+}
+.callback__text,
+.callback__link {
+  color: #fff;
+  font-size: 12px;
+}
+.callback__link {
+  text-decoration: none;
+  position: relative;
+}
+.callback__link::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  bottom: -3px;
+  left: 0;
+  height: 1px;
+  background-color: #828282;
+}
