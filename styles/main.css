@@ -945,3 +945,45 @@ body {
   opacity: 1;
   transition: all 0.3s ease;
 }
+.contacts__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contacts__item:not(:last-child) {
+  margin-bottom: 100px;
+}
+.contacts__item:last-child {
+  padding-bottom: 55px;
+}
+.contacts__links {
+  width: calc(100% - 727px);
+  margin-right: 50px;
+}
+.contacts__links address,
+.contacts__links .address__phone,
+.contacts__links .address__email {
+  color: #333;
+  font-style: normal;
+}
+.contacts__links address {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: row;
+}
+.contacts__links address img {
+  padding-right: 10px;
+}
+.contacts__links .address__email {
+  margin-top: 18px;
+}
+.contacts__heading {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 150%;
+  margin-bottom: 30px;
+}
+.contacts__map img {
+  object-fit: cover;
+}

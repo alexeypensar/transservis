@@ -1059,11 +1059,9 @@ html, body {
 
 	padding-left: 60px;
 	padding-right: 80px;
-	//display: none;
 	opacity: 0;
 	height: 0;
 	transition: all 0.15s ease;
-	//visibility: hidden;
 
 }
 
@@ -1091,5 +1089,58 @@ html, body {
 		opacity: 1;
 		transition: all 0.3s ease;
 
+	}
+}
+
+
+.contacts__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	&:not(:last-child) {
+		margin-bottom: 100px;
+	}
+
+	&:last-child {
+		padding-bottom: 55px;
+	}
+}
+
+.contacts__links {
+	width: calc(100% - 727px);
+	margin-right: 50px;
+
+	& address, & .address__phone, & .address__email {
+		color: $color-black;
+		font-style: normal;
+	}
+
+	& address {
+		margin-bottom: 18px;
+		display: flex;
+		flex-direction: row;
+		& img {
+			padding-right: 10px;
+		}
+	}
+
+	& .address__email {
+		margin-top: 18px;
+
+	}
+}
+
+.contacts__heading {
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 150%;
+	margin-bottom: 30px;
+}
+
+.contacts__map {
+	//max-width: 727px;
+	& img {
+		object-fit: cover;
 	}
 }
