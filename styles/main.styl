@@ -1005,3 +1005,91 @@ html, body {
 .type__prices .breadcrumbs {
 	margin-bottom: 0;
 }
+
+.questions__list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.questions__item {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+
+}
+
+.questions__title {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 75px;
+	border: 1px solid $color-border;
+	border-radius: 4px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-decoration: none;
+	color: $color-black;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		top: 25px;
+		right: 30px;
+		content: url('../img/icons/questions-arrow-down.svg');
+		transform: rotate(0deg);
+		transition: transform 0.3s ease;
+
+	}
+
+}
+
+.questions__item:nth-child(odd) .questions__title {
+	background-color: $color-lightgray;
+}
+
+.questions__answer {
+
+	padding-left: 60px;
+	padding-right: 80px;
+	//display: none;
+	opacity: 0;
+	height: 0;
+	transition: all 0.15s ease;
+	//visibility: hidden;
+
+}
+
+
+.questions__item_active {
+	& .questions__title {
+		background: $blue-gradient;
+		color: #FFFFFF;
+		font-weight: 500;
+		transition: all 0.3s ease;
+
+		&::after {
+			transform: rotate(180deg);
+			transition: transform 0.3s ease;
+		}
+	}
+
+	& .questions__answer {
+		margin-top: 30px;
+		margin-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: auto;
+		opacity: 1;
+		transition: all 0.3s ease;
+
+	}
+}
