@@ -703,6 +703,18 @@ body {
   width: 392px;
   padding: 20px 30px;
   border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.address__select_wrapper {
+  position: relative;
+}
+.address__select_wrapper::after {
+  position: absolute;
+  content: url("../img/icons/select-arrow-down.svg");
+  top: 22px;
+  right: 30px;
 }
 .address__subheading {
   font-weight: 500;
