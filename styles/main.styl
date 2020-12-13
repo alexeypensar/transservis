@@ -958,3 +958,46 @@ html, body {
 	padding-top: 25px;
 	padding-bottom: 65px;
 }
+
+.documents {
+	padding-bottom: 35px;
+}
+
+.documents__block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.documents__block:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.documents__heading {
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 1;
+	margin-bottom: 25px;
+}
+
+.documents__link {
+	margin-bottom: 30px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1;
+	//line-height: 150%;
+	{$text-gradient};
+	text-decoration: none;
+	text-transform: uppercase;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+		width: 100%;
+		height: 1px;
+		background-color: $color-darkblue;
+	}
+}
