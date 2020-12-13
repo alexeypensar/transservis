@@ -596,7 +596,7 @@ html, body {
 
 .our-clients {
 	padding-top: 65px;
-	padding-bottom: 65px;
+	//padding-bottom: 130px;
 	position: relative;
 }
 
@@ -635,7 +635,7 @@ html, body {
 	outline: none;
 	background: transparent;
 	position: absolute;
-	top: 59%;
+	top: 72%;
 
 	&_prev {
 		left: 0;
@@ -655,7 +655,8 @@ html, body {
 
 .footer {
 	background-color: $color-lightgray;
-	height: 500px;
+	margin-top: 120px;
+	//height: 500px;
 }
 
 .footer__inner {
@@ -670,14 +671,37 @@ html, body {
 	justify-content: space-between;
 	align-items: flex-start;
 	padding: 40px 40px 30px 0;
+	height: 445px;
+	width: calc(100% - 530px);
 }
 
 
 .footer__info_top {
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 65px;
+}
+
+.footer__nav {
+	margin-left: 80px;
+	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+	margin-top: 15px;
+	height: 100%;
+}
+
+.footer__li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer__li_large {
+	margin-bottom: 13px;
 }
 
 .footer__info_bottom {
@@ -685,7 +709,61 @@ html, body {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
+	width: 100%;
 }
+
+
+.footer__link {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	text-decoration: none;
+	color: $color-black;
+}
+
+.footer__li_large, .footer__link_large {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $color-black;
+}
+
+.footer__link_large {
+
+}
+
+
+.footer__copyright {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 150%;
+	color: $color-gray;
+}
+
+.footer__link_policy {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 150%;
+	text-decoration: none;
+	position: relative;
+	color: $color-gray;
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 1px;
+		left: 0;
+		bottom: 0;
+		background-color: $color-gray;
+
+	}
+
+}
+
+
 
 
 .footer__addresses {
@@ -693,6 +771,70 @@ html, body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+	width: 530px;
+	height: 505px;
+	background: $blue-gradient;
+	margin-top: -60px;
+	position: relative;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 57px 0 63px 53px;
+	color: #FFFFFF;
 }
 
+.address__heading {
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 150%;
+	margin-bottom: 27px;
+}
 
+.address__select {
+	margin-bottom: 33px;
+	height: 70px;
+	width: 392px;
+	padding: 20px 30px;
+	border-radius: 4px;
+}
+
+.address__subheading {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	margin-bottom: 25px;
+	margin-top: 0;
+
+}
+
+.address__phone, .address__email, .footer address {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	font-style: normal;
+	text-decoration: none;
+	color: #FFFFFF;
+	display: flex;
+	& img {
+		padding-right: 10px;
+	}
+}
+
+.address__phone:not(:first-of-type) {
+	padding-left: 35px;
+}
+
+.address__phone:first-of-type {
+	display: flex;
+	& img {
+		padding-right: 10px;
+	}
+}
+
+.address__email {
+	margin-top: 18px;
+}
+
+.footer address {
+	margin-bottom: 18px;
+
+}
