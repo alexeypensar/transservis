@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Транссервис - Тарифы</title>
+
+    <!--цвет вкладки в chrome-->
+    <meta name="theme-color" content="#9CC2CE">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+
+</head>
+<body>
+
+<header class="header header__type">
+
+    <nav class="header__nav container">
+        <ul class="header__ul">
+            <li class="header__li">
+                <a href="#" class="header__link header__link_logo">
+                    <img src="img/icons/logo.svg" alt="Транссервис">
+                </a>
+            </li>
+            <li class="header__li">
+                <a href="#" class="header__link header__link_arrow">Услуги</a>
+            </li>
+            <li class="header__li">
+                <a href="#" class="header__link header__link_arrow">О нас</a>
+            </li>
+            <li class="header__li">
+                <a href="#" class="header__link">Тарифы</a>
+            </li>
+            <li class="header__li">
+                <a href="#" class="header__link">Контакты</a>
+            </li>
+            <li class="header__li">
+                <a href="#" class="header__link header__link_phone">+7 (913) 382-67-40</a>
+            </li>
+            <li class="header__li">
+                <a href="#" class="header__link header__link_callback">Заказать звонок</a>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="type type__prices container">
+        <header class="type__header">
+            <h1 class="type__heading">Тарифы</h1>
+            <img src="img/icons/type/calculator-white.svg" alt="калькулятор">
+        </header>
+
+        <nav class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">Главная</a></li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link_active" href="">Тарифы</a></li>
+            </ul>
+        </nav>
+
+
+    </section>
+
+
+
+    <section class="calculator__wrapper">
+        <div class="calculator container">
+
+            <h2 class="calculator__heading">Рассчитайте стоимость перевозки прямо сейчас!</h2>
+
+            <div class="calculator__inputs calculator__inputs_top">
+                <input type="text" class="calculator__input calculator__input_split" placeholder="Откуда">
+                <img src="img/icons/calculator-arrows.svg" alt="стрелки">
+                <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">
+                <div class="calculator__inputs_numbers">
+                    <input type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
+                           step="1">
+                    <input type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
+                           step="0.01">
+                </div>
+            </div>
+            <label class="calculator__label" for="calculatorLength">Габариты самого большого места</label>
+            <div class="calculator__inputs calculator__inputs_bottom">
+
+                <div class="calculator__inputs_numbers">
+                    <input type="number" class="calculator__input calculator__input_length" placeholder="Длина (м)"
+                           step="0.01" id="calculatorLength">
+                    <input type="number" class="calculator__input calculator__input_width" placeholder="Ширина (м)"
+                           step="0.01">
+                    <input type="number" class="calculator__input calculator__input_height" placeholder="Высота (м)"
+                           step="0.01">
+                </div>
+
+                <button class="main-button" type="button">Рассчитать
+                    <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
+                </button>
+            </div>
+
+            <!--            todo невидимые лейблы добавить инпутам-->
+
+        </div>
+
+        <div class="pricelist container">
+            <p class="pricelist__text">Или посмотрите наш <a href="#">прайс-лист</a></p>
+        </div>
+    </section>
+
+    
+
+
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer__inner container">
+        <div class="footer__info">
+
+            <div class="footer__info_top">
+
+                <div class="footer__logo">
+                    <img src="img/icons/logo.svg" alt="Транс-Сервис">
+                </div>
+
+                <nav class="footer__nav">
+                    <ul class="footer__ul">
+                        <li class="footer__li footer__li_large">Услуги</li>
+                        <li class="footer__li"><a href="#" class="footer__link">Авто</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Ж/Д</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Авиа</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Речные</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Мультимодальные</a></li>
+                    </ul>
+
+                    <a href="#" class="footer__link footer__link_large">Тарифы</a>
+
+
+                </nav>
+                <nav class="footer__nav">
+
+                    <ul class="footer__ul">
+                        <li class="footer__li footer__li_large">О нас</li>
+                        <li class="footer__li"><a href="#" class="footer__link">О компании</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Реквизиты</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Документы</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link">Вопрос-Ответ</a></li>
+                    </ul>
+
+                    <a href="#" class="footer__link footer__link_large">Контакты</a>
+
+                </nav>
+            </div>
+
+            <div class="footer__info_bottom">
+
+                <p class="footer__copyright">2020 Траснпортная компания ООО “Транс-сервис”.</p>
+                <a href="policy.html" class="footer__link_policy">Политика конфиденциальности</a>
+
+
+            </div>
+
+
+        </div>
+        <div class="footer__addresses">
+            <h4 class="address__heading">Представительство в вашем городе:</h4>
+
+            <div class="address__select_wrapper">
+                <select class="address__select" name="footerCity" id="footerCity">
+                    <option value="Novosibirsk" class="address__option">Новосибирск</option>
+                    <option value="Moscow" class="address__option">Москва</option>
+                    <option value="Yakutsk" class="address__option">Якутск</option>
+                </select>
+            </div>
+
+
+            <h5 class="address__subheading">Склад и офис</h5>
+
+            <address><img src="img/icons/address-location.svg" alt="">ул. Новая Заря 2А корп.4</address>
+            <a href="" class="address__phone"><img src="img/icons/address-phone.svg" alt="">8 (383) 280-41-71</a>
+            <a href="" class="address__phone">8-913-382-67-40</a>
+            <a href="" class="address__phone">8-983-136-85-58</a>
+            <a href="" class="address__phone">8-983-003-87-79</a>
+
+            <a href="mailto:urry25@mail.ru" class="address__email"><img src="img/icons/address-mail.svg" alt="">urry25@mail.ru</a>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://unpkg.com/embla-carousel@latest/embla-carousel.umd.js">
+</script>
+
+
+<script>
+    var emblaNode = document.getElementById("embla");
+    const options = {
+        loop: "true",
+        align: "start"
+    }
+    var embla = EmblaCarousel(emblaNode, options);
+
+    var prevEmbla = document.getElementById('emblaButtonPrev');
+    prevEmbla.addEventListener('click', embla.scrollPrev);
+    var nextEmbla = document.getElementById('emblaButtonNext');
+    nextEmbla.addEventListener('click', embla.scrollNext);
+
+
+    var autoplay = function autoplay(embla, interval) {
+        var timer = 0;
+
+        var play = function play() {
+            stop();
+            requestAnimationFrame(function () {
+                return timer = window.setTimeout(next, interval);
+            });
+        };
+
+        var stop = function stop() {
+            window.clearTimeout(timer);
+            timer = 0;
+        };
+
+        var next = function next() {
+            if (embla.canScrollNext()) {
+                embla.scrollNext();
+            } else {
+                embla.scrollTo(0);
+            }
+
+            play();
+        };
+
+        return {
+            play: play,
+            stop: stop
+        };
+    };
+
+    var autoplayer = autoplay(embla, 3000);
+    embla.on("pointerDown", autoplayer.stop);
+    embla.on("init", autoplayer.play);
+
+
+    var emblaButtons = Array.from(document.getElementsByClassName('embla__button'));
+    emblaButtons.forEach(function (el) {
+        el.addEventListener('click', function () {
+            el.blur();
+        });
+    });
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

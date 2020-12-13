@@ -875,3 +875,6 @@ body {
   height: 1px;
   background-color: #0b1f3e;
 }
+.type__prices .breadcrumbs {
+  margin-bottom: 0;
+}
