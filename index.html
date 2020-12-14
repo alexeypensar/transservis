@@ -66,7 +66,30 @@
     </div>
 
     <article class="header_right">
-        <img src="img/header-boat.jpg" alt="">
+        <div class="embla" id="emblaHeader">
+            <div class="embla__container">
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/header-boat.jpg" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/header-boat.jpg" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/header-boat.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="header__embla-buttons">
+            <button type="button" class="header__embla_prev" id="headerEmblaPrev">
+                <img src="img/icons/embla-arrow-left.svg" alt="">
+            </button>
+            <button type="button" class="header__embla_next" id="headerEmblaNext">
+                <img src="img/icons/embla-arrow-right.svg" alt="">
+            </button>
+        </div>
     </article>
 
 
@@ -424,6 +447,22 @@
 
 
 <script>
+
+    //header carousel
+    var emblaNodeHeader = document.getElementById("emblaHeader");
+    const optionsHeader = {
+        loop: "true",
+        align: "start"
+    };
+    var emblaHeader = EmblaCarousel(emblaNodeHeader, optionsHeader);
+
+    var prevEmblaHeader = document.getElementById('headerEmblaPrev');
+    prevEmblaHeader.addEventListener('click', emblaHeader.scrollPrev);
+    var nextEmblaHeader = document.getElementById('headerEmblaNext');
+    nextEmblaHeader.addEventListener('click', emblaHeader.scrollNext);
+
+
+    // our-clients carousel
     var emblaNode = document.getElementById("embla");
     const options = {
         loop: "true",
