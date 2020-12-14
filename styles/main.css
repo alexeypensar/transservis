@@ -663,7 +663,7 @@ body {
 }
 .our-clients .embla__slide {
   position: relative;
-  min-width: 25%;
+  min-width: 20%;
   padding-right: 25px;
   height: 140px;
   display: flex;
