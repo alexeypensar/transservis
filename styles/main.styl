@@ -71,6 +71,11 @@ html, body {
 		top: 5px;
 		left: -12px;
 	}
+
+	&:hover, &:focus {
+		color: $color-blue;
+		transition: color 0.3s ease;
+	}
 }
 
 .header__link {
@@ -370,8 +375,18 @@ html, body {
 	margin-top: 23px;
 	{$text-gradient};
 
-	& a {
-		border-bottom: 1px solid $color-darkblue;
+
+}
+
+.pricelist__link {
+	border-bottom: 1px solid $color-darkblue;
+
+	&:hover, &:focus {
+		border-bottom: 1px solid $color-blue;
+		background: linear-gradient(to right, $color-blue, $color-blue);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: rgba(255, 255, 255, 0);
+		transition: all 0.3s ease;
 	}
 }
 
@@ -559,6 +574,16 @@ html, body {
 
 	& img {
 		padding-left: 18px;
+		padding-bottom: 2px;
+		transform: scale(1);
+	}
+
+	&:hover, &:focus {
+		& img {
+			transform: scale(1.2);
+			padding-left: 22px;
+			transition: all 0.3s ease;
+		}
 	}
 }
 
@@ -638,6 +663,13 @@ html, body {
 		left: 0;
 		height: 1px;
 		background-color: $color-gray;
+	}
+
+	&:hover, &:focus {
+		&::after {
+			background-color: #FFFFFF;
+			transition: all 0.3s ease;
+		}
 	}
 }
 
@@ -805,6 +837,16 @@ html, body {
 
 	}
 
+	&:hover, &:focus {
+		color: $color-blue;
+		transition: color 0.3s ease;
+
+		&::after {
+			background-color: $color-blue;
+			transition: background-color 0.3s ease;
+		}
+	}
+
 }
 
 
@@ -891,6 +933,13 @@ html, body {
 	display: flex;
 	& img {
 		padding-right: 10px;
+	}
+}
+
+.address__phone, .address__email {
+	&:hover, &:focus {
+		color: $color-blue;
+		transition: color 0.3s ease;
 	}
 }
 

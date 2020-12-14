@@ -52,6 +52,37 @@ button:hover,
 button:focus {
   cursor: pointer;
 }
+.main-link {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  position: relative;
+  overflow: hidden;
+}
+.main-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #1c79ce;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.main-link:hover:after,
+.main-link:focus:after,
+.main-link:active:after {
+  left: 0;
+  right: 0;
+}
 @media screen and (max-width: 1439.98px) {
   .container {
     max-width: 1200px;
@@ -126,6 +157,11 @@ body {
   content: url("../img/icons/header-phone.svg");
   top: 5px;
   left: -12px;
+}
+.header__link_phone:hover,
+.header__link_phone:focus {
+  color: #1c79ce;
+  transition: color 0.3s ease;
 }
 .header__link {
   text-decoration: none;
@@ -373,8 +409,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255,255,255,0);
 }
-.pricelist__text a {
+.pricelist__link {
   border-bottom: 1px solid #0b1f3e;
+}
+.pricelist__link:hover,
+.pricelist__link:focus {
+  border-bottom: 1px solid #1c79ce;
+  background: linear-gradient(to right, #1c79ce, #1c79ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255,255,255,0);
+  transition: all 0.3s ease;
 }
 .section__heading {
   color: #333;
@@ -525,6 +569,14 @@ body {
 }
 .about-us__link img {
   padding-left: 18px;
+  padding-bottom: 2px;
+  transform: scale(1);
+}
+.about-us__link:hover img,
+.about-us__link:focus img {
+  transform: scale(1.2);
+  padding-left: 22px;
+  transition: all 0.3s ease;
 }
 .about-us__numbers {
   display: flex;
@@ -591,6 +643,11 @@ body {
   left: 0;
   height: 1px;
   background-color: #828282;
+}
+.callback__link:hover::after,
+.callback__link:focus::after {
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
 .our-clients {
   padding-top: 65px;
@@ -719,6 +776,16 @@ body {
   bottom: 0;
   background-color: #828282;
 }
+.footer__link_policy:hover,
+.footer__link_policy:focus {
+  color: #1c79ce;
+  transition: color 0.3s ease;
+}
+.footer__link_policy:hover::after,
+.footer__link_policy:focus::after {
+  background-color: #1c79ce;
+  transition: background-color 0.3s ease;
+}
 .footer__addresses {
   display: flex;
   flex-direction: column;
@@ -790,6 +857,13 @@ body {
 }
 .address__phone:first-of-type img {
   padding-right: 10px;
+}
+.address__phone:hover,
+.address__email:hover,
+.address__phone:focus,
+.address__email:focus {
+  color: #1c79ce;
+  transition: color 0.3s ease;
 }
 .address__email {
   margin-top: 18px;
