@@ -1072,6 +1072,16 @@ html, body {
 
 .address__phone:first-of-type {
 	display: flex;
+	position: relative;
+	padding-left: 35px;
+
+	&::before {
+		content: url('../img/icons/address-phone.svg');
+		position: absolute;
+		left: 0;
+
+	}
+
 	& img {
 		padding-right: 10px;
 	}

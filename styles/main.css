@@ -972,6 +972,13 @@ body {
 }
 .address__phone:first-of-type {
   display: flex;
+  position: relative;
+  padding-left: 35px;
+}
+.address__phone:first-of-type::before {
+  content: url("../img/icons/address-phone.svg");
+  position: absolute;
+  left: 0;
 }
 .address__phone:first-of-type img {
   padding-right: 10px;
