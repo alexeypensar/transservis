@@ -83,10 +83,10 @@
             </div>
         </div>
         <div class="header__embla-buttons">
-            <button type="button" class="header__embla_prev" id="headerEmblaPrev">
+            <button type="button" class="header__embla header__embla_prev" id="headerEmblaPrev">
                 <img src="img/icons/embla-arrow-left.svg" alt="">
             </button>
-            <button type="button" class="header__embla_next" id="headerEmblaNext">
+            <button type="button" class="header__embla header__embla_next" id="headerEmblaNext">
                 <img src="img/icons/embla-arrow-right.svg" alt="">
             </button>
         </div>
@@ -447,35 +447,7 @@
 
 
 <script>
-
-    //header carousel
-    var emblaNodeHeader = document.getElementById("emblaHeader");
-    const optionsHeader = {
-        loop: "true",
-        align: "start"
-    };
-    var emblaHeader = EmblaCarousel(emblaNodeHeader, optionsHeader);
-
-    var prevEmblaHeader = document.getElementById('headerEmblaPrev');
-    prevEmblaHeader.addEventListener('click', emblaHeader.scrollPrev);
-    var nextEmblaHeader = document.getElementById('headerEmblaNext');
-    nextEmblaHeader.addEventListener('click', emblaHeader.scrollNext);
-
-
-    // our-clients carousel
-    var emblaNode = document.getElementById("embla");
-    const options = {
-        loop: "true",
-        align: "start"
-    }
-    var embla = EmblaCarousel(emblaNode, options);
-
-    var prevEmbla = document.getElementById('emblaButtonPrev');
-    prevEmbla.addEventListener('click', embla.scrollPrev);
-    var nextEmbla = document.getElementById('emblaButtonNext');
-    nextEmbla.addEventListener('click', embla.scrollNext);
-
-
+    // autoplay for Embla carousel
     var autoplay = function autoplay(embla, interval) {
         var timer = 0;
 
@@ -507,10 +479,38 @@
         };
     };
 
-    var autoplayer = autoplay(embla, 3000);
-    embla.on("pointerDown", autoplayer.stop);
-    embla.on("init", autoplayer.play);
+    //header carousel
+    var emblaNodeHeader = document.getElementById("emblaHeader");
+    const optionsHeader = {
+        loop: "true",
+        align: "start"
+    };
+    var emblaHeader = EmblaCarousel(emblaNodeHeader, optionsHeader);
 
+    var emblaButtonsHeader = Array.from(document.getElementsByClassName('header__embla'));
+    emblaButtonsHeader.forEach(function (el) {
+        el.addEventListener('click', function () {
+            el.blur();
+        });
+    });
+
+    var prevEmblaHeader = document.getElementById('headerEmblaPrev');
+    prevEmblaHeader.addEventListener('click', emblaHeader.scrollPrev);
+    var nextEmblaHeader = document.getElementById('headerEmblaNext');
+    nextEmblaHeader.addEventListener('click', emblaHeader.scrollNext);
+
+    var autoplayerHeader = autoplay(emblaHeader, 3000);
+    emblaHeader.on("pointerDown", autoplayerHeader.stop);
+    emblaHeader.on("init", autoplayerHeader.play);
+
+
+    // our-clients carousel
+    var emblaNode = document.getElementById("embla");
+    const options = {
+        loop: "true",
+        align: "start"
+    }
+    var embla = EmblaCarousel(emblaNode, options);
 
     var emblaButtons = Array.from(document.getElementsByClassName('embla__button'));
     emblaButtons.forEach(function (el) {
@@ -518,6 +518,23 @@
             el.blur();
         });
     });
+
+    var prevEmbla = document.getElementById('emblaButtonPrev');
+    prevEmbla.addEventListener('click', embla.scrollPrev);
+    var nextEmbla = document.getElementById('emblaButtonNext');
+    nextEmbla.addEventListener('click', embla.scrollNext);
+
+    var autoplayer = autoplay(embla, 3000);
+    embla.on("pointerDown", autoplayer.stop);
+    embla.on("init", autoplayer.play);
+
+
+
+
+
+
+
+
 </script>
 
 <script src="js/script.js"></script>
