@@ -539,6 +539,10 @@ body {
   height: 283px;
   padding: 31px 22px;
   border: 1px solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .services__item .services__heading {
   width: 60%;
@@ -563,6 +567,70 @@ body {
   position: absolute;
   bottom: 42px;
   right: 42px;
+}
+.services__description {
+  display: none;
+  font-size: 14px;
+  line-height: 140%;
+  color: #fff;
+}
+.services__link {
+  display: none;
+}
+.services__item:hover,
+.services__item:focus {
+  background-color: #1c79ce;
+  transition: all 0.3s ease;
+}
+.services__item:hover .services__heading,
+.services__item:focus .services__heading {
+  color: #fff;
+  margin-bottom: 12px;
+}
+.services__item:hover .services__heading:first-letter,
+.services__item:focus .services__heading:first-letter {
+  color: #fff;
+}
+.services__item:hover img,
+.services__item:focus img {
+  display: none;
+}
+.services__item:hover .services__description,
+.services__item:focus .services__description {
+  display: flex;
+  transition: all 0.3s ease;
+}
+.services__item:hover .services__link,
+.services__item:focus .services__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 25px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 22px;
+}
+.services__item:hover .services__link::after,
+.services__item:focus .services__link::after {
+  position: absolute;
+  content: url("../img/icons/arrow-right-red.svg");
+  right: -5px;
+  top: 2px;
+  transition: right 0.3s ease;
+}
+.services__item:hover .services__link:hover::after,
+.services__item:focus .services__link:hover::after,
+.services__item:hover .services__link:focus::after,
+.services__item:focus .services__link:focus::after {
+  right: -10px;
+  transition: right 0.3s ease;
 }
 .services__heading {
   font-weight: 500;
