@@ -87,3 +87,5 @@ footerSelect.addEventListener('change', function (qualifiedName, value) {
 });
 
 
+// todo во всех футерах и хэдерах на всех страницах всё проверить, дёрнуть с index.html
+
