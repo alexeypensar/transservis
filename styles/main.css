@@ -83,26 +83,6 @@ button:focus {
   left: 0;
   right: 0;
 }
-@media screen and (max-width: 1439.98px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-@media screen and (max-width: 1199.98px) {
-  .container {
-    max-width: 992px;
-  }
-}
-@media screen and (max-width: 991.98px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .container {
-    max-width: 576px;
-  }
-}
 html {
   scroll-behavior: smooth;
 }
@@ -120,6 +100,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .header__nav {
   padding-top: 28px;
@@ -1228,4 +1210,19 @@ body {
 }
 .contacts__map img {
   object-fit: cover;
+}
+@media screen and (max-width: 1199.98px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .container {
+    max-width: 576px;
+  }
 }
