@@ -1,8 +1,6 @@
 "use strict";
 
 
-
-
 //questions page
 
 let questions = Array.from(document.getElementsByClassName('questions__item'));
@@ -29,7 +27,7 @@ let cityPhone4 = document.getElementById('cityPhone4');
 
 
 
-footerSelect.addEventListener('change', function (qualifiedName, value) {
+footerSelect.addEventListener('change', function() {
     if (footerSelect.value === 'Novosibirsk') {
         cityAddress.textContent = 'ул. Новая Заря 2А корп.4';
 
