@@ -1412,6 +1412,18 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .callback {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px 40px;
+  }
+  .callback__inputs {
+    flex-wrap: wrap;
+  }
+  .callback__inputs .main-button {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .container {
@@ -1480,6 +1492,10 @@ body {
   .services__item:not(.services__item_large) {
     padding: 20px 15px;
   }
+  .callback__heading {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
 }
 @media screen and (max-width: 575.98px) {
   .header .main-button {
@@ -1542,6 +1558,13 @@ body {
   .about-us__number p {
     text-align: center;
   }
+  .callback {
+    padding: 25px;
+  }
+  .callback .main-button {
+    width: 100%;
+    height: 60px;
+  }
 }
 @media screen and (max-width: 482px) {
   .services__item:not(.services__item_large) {
@@ -1568,5 +1591,8 @@ body {
   .advantages__item {
     width: 100%;
     min-height: auto;
+  }
+  .callback {
+    padding: 15px;
   }
 }
