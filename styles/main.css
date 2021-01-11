@@ -1271,6 +1271,16 @@ body {
     width: 30%;
     min-height: 260px;
   }
+  .services__info {
+    padding-right: 20px;
+  }
+  .services__item:not(.services__item_large) {
+    width: 23%;
+  }
+  .services__item:not(.services__item_large) .services__heading {
+    width: 100%;
+    font-size: 1.15rem;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .container {
@@ -1345,6 +1355,31 @@ body {
     width: 48%;
     min-height: 210px;
   }
+  .services__wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .services__text {
+    width: 50%;
+  }
+  .services__info {
+    width: 100%;
+  }
+  .services__item_large {
+    width: 48%;
+    padding: 30px 20px;
+  }
+  .services_bottom {
+    flex-wrap: wrap;
+  }
+  .services__item:not(.services__item_large) {
+    width: 48%;
+    height: 240px;
+  }
+  .services__item:not(.services__item_large):nth-child(3),
+  .services__item:not(.services__item_large):nth-child(4) {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .container {
@@ -1387,6 +1422,27 @@ body {
   }
   .advantages__item {
     min-height: 250px;
+  }
+  .services_top {
+    flex-direction: column;
+  }
+  .services__text {
+    width: 100%;
+  }
+  .services__info {
+    padding-right: 0;
+  }
+  .services__item_large {
+    width: 100%;
+    margin-top: 20px;
+    height: 200px;
+  }
+  .services__item_large img {
+    right: 20px;
+    bottom: 20px;
+  }
+  .services__item:not(.services__item_large) {
+    padding: 20px 15px;
   }
 }
 @media screen and (max-width: 575.98px) {
@@ -1432,6 +1488,30 @@ body {
   }
   .advantages .section__heading {
     font-size: 2rem;
+  }
+  .services__item_large {
+    padding: 20px 15px;
+  }
+  .services__heading {
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .services__item:hover .services__link,
+  .services__item:focus .services__link {
+    bottom: 20px;
+  }
+}
+@media screen and (max-width: 482px) {
+  .services__item:not(.services__item_large) {
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+  }
+  .services__item_large {
+    min-height: 260px;
+  }
+  .services__item:nth-child(1) {
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 410px) {
