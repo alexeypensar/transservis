@@ -1401,6 +1401,9 @@ body {
   .calculator {
     padding: 30px 15px;
   }
+  .calculator__input {
+    font-size: 0.7rem;
+  }
   .calculator .main-button {
     width: 100%;
     margin-left: 0;
