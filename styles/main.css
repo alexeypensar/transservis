@@ -1576,6 +1576,12 @@ body {
     width: 100%;
     height: 60px;
   }
+  .our-clients .section__heading {
+    margin-bottom: 0;
+  }
+  .our-clients .embla__button {
+    top: 62%;
+  }
 }
 @media screen and (max-width: 482px) {
   .services__item:not(.services__item_large) {
