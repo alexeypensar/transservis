@@ -675,6 +675,14 @@
 		font-size: 1.6rem;
 	}
 
+	.documents__link {
+		text-decoration: underline;
+		line-height: 1.3;
+		&::after {
+			display: none;
+		}
+	}
+
 
 }
 
@@ -785,6 +793,18 @@
 
 	.type__header img {
 		width: 100px;
+	}
+
+	.documents__heading {
+		margin-bottom: 20px;
+	}
+
+	.documents__link {
+		margin-bottom: 15px;
+	}
+
+	.documents__block:not(:last-child) {
+		margin-bottom: 15px;
 	}
 
 }

@@ -144,14 +144,14 @@
                 <nav class="footer__nav">
                     <ul class="footer__ul">
                         <li class="footer__li footer__li_large">Услуги</li>
-                        <li class="footer__li"><a href="#" class="footer__link">Авто</a></li>
-                        <li class="footer__li"><a href="#" class="footer__link">Ж/Д</a></li>
-                        <li class="footer__li"><a href="#" class="footer__link">Авиа</a></li>
-                        <li class="footer__li"><a href="#" class="footer__link">Речные</a></li>
-                        <li class="footer__li"><a href="#" class="footer__link">Мультимодальные</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Авто</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Ж/Д</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Авиа</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Речные</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Мультимодальные</a></li>
                     </ul>
 
-                    <a href="#" class="footer__link footer__link_large">Тарифы</a>
+                    <a href="#" class="footer__link footer__link_large main-link">Тарифы</a>
 
 
                 </nav>
@@ -159,13 +159,13 @@
 
                     <ul class="footer__ul">
                         <li class="footer__li footer__li_large">О нас</li>
-                        <li class="footer__li"><a href="#" class="footer__link">О компании</a></li>
-                        <li class="footer__li"><a href="#" class="footer__link">Реквизиты</a></li>
-                        <li class="footer__li"><a href="#" class="footer__link">Документы</a></li>
-                        <li class="footer__li"><a href="#" class="footer__link">Вопрос-Ответ</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">О компании</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Реквизиты</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Документы</a></li>
+                        <li class="footer__li"><a href="#" class="footer__link main-link">Вопрос-Ответ</a></li>
                     </ul>
 
-                    <a href="#" class="footer__link footer__link_large">Контакты</a>
+                    <a href="#" class="footer__link footer__link_large main-link">Контакты</a>
 
                 </nav>
             </div>
@@ -181,7 +181,7 @@
 
         </div>
         <div class="footer__addresses">
-            <h4 class="address__heading">Представительство в вашем городе:</h4>
+            <label for="footerCity" class="address__heading">Представительство в вашем городе:</label>
 
             <div class="address__select_wrapper">
                 <select class="address__select" name="footerCity" id="footerCity">
@@ -193,80 +193,19 @@
 
 
             <h5 class="address__subheading">Склад и офис</h5>
-
-            <address><img src="img/icons/address-location.svg" alt="">ул. Новая Заря 2А корп.4</address>
-            <a href="" class="address__phone"><img src="img/icons/address-phone.svg" alt="">8 (383) 280-41-71</a>
-            <a href="" class="address__phone">8-913-382-67-40</a>
-            <a href="" class="address__phone">8-983-136-85-58</a>
-            <a href="" class="address__phone">8-983-003-87-79</a>
+            <!--            <img src="img/icons/address-phone.svg" alt="">-->
+            <address><img src="img/icons/address-location.svg" alt=""><span
+                    id="cityAddress">ул. Новая Заря 2А корп.4</span></address>
+            <a id="cityPhone" href="tel:+73832804171" class="address__phone">8 (383) 280-41-71</a>
+            <a id="cityPhone2" href="tel:+79133826740" class="address__phone">8-913-382-67-40</a>
+            <a id="cityPhone3" href="tel:+79831368558" class="address__phone">8-983-136-85-58</a>
+            <a id="cityPhone4" href="tel:+79830038779" class="address__phone">8-983-003-87-79</a>
 
             <a href="mailto:urry25@mail.ru" class="address__email"><img src="img/icons/address-mail.svg" alt="">urry25@mail.ru</a>
         </div>
     </div>
 
 </footer>
-
-<script src="https://unpkg.com/embla-carousel@latest/embla-carousel.umd.js">
-</script>
-
-
-<script>
-    var emblaNode = document.getElementById("embla");
-    const options = {
-        loop: "true",
-        align: "start"
-    }
-    var embla = EmblaCarousel(emblaNode, options);
-
-    var prevEmbla = document.getElementById('emblaButtonPrev');
-    prevEmbla.addEventListener('click', embla.scrollPrev);
-    var nextEmbla = document.getElementById('emblaButtonNext');
-    nextEmbla.addEventListener('click', embla.scrollNext);
-
-
-    var autoplay = function autoplay(embla, interval) {
-        var timer = 0;
-
-        var play = function play() {
-            stop();
-            requestAnimationFrame(function () {
-                return timer = window.setTimeout(next, interval);
-            });
-        };
-
-        var stop = function stop() {
-            window.clearTimeout(timer);
-            timer = 0;
-        };
-
-        var next = function next() {
-            if (embla.canScrollNext()) {
-                embla.scrollNext();
-            } else {
-                embla.scrollTo(0);
-            }
-
-            play();
-        };
-
-        return {
-            play: play,
-            stop: stop
-        };
-    };
-
-    var autoplayer = autoplay(embla, 3000);
-    embla.on("pointerDown", autoplayer.stop);
-    embla.on("init", autoplayer.play);
-
-
-    var emblaButtons = Array.from(document.getElementsByClassName('embla__button'));
-    emblaButtons.forEach(function (el) {
-        el.addEventListener('click', function () {
-            el.blur();
-        });
-    });
-</script>
 
 <script src="js/script.js"></script>
 </body>
