@@ -1834,6 +1834,8 @@ body {
   }
   .type__heading {
     font-size: 1.4rem;
+    display: inline-block;
+    width: 70%;
   }
   .type__header img {
     width: 100px;
