@@ -1895,4 +1895,8 @@ body {
   .breadcrumbs__item:not(:last-of-type)::after {
     right: -14px;
   }
+  .breadcrumbs__item span,
+  .breadcrumbs__link {
+    font-size: 0.65rem;
+  }
 }
