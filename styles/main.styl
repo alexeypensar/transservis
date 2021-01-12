@@ -127,6 +127,7 @@ html, body {
 
 .header__link_logo {
 	margin-right: 105px;
+	min-width: 122px;
 }
 
 .header__link_phone {
@@ -135,6 +136,7 @@ html, body {
 	position: relative;
 	font-weight: 500;
 	font-size: 1.25rem;
+	white-space: nowrap;
 	&::before {
 		position: absolute;
 		content: url('../img/icons/header-phone.svg');
@@ -174,6 +176,7 @@ html, body {
 	top: 1px;
 	{$text-gradient};
 
+
 	&::after {
 		position: absolute;
 		content: '';
@@ -183,6 +186,57 @@ html, body {
 		bottom: -2px;
 	}
 
+}
+
+
+.mobile-menu__button {
+	border: none;
+	outline: none;
+	//background-color: transparent;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	position: relative;
+	//top: 8px;
+	left: 0;
+	display: none;
+	padding: 0;
+
+
+	& span {
+		width: 20px;
+		height: 2px;
+		display: flex;
+		border-radius: 5px;
+		background-color: $color-blue;
+		position: relative;
+		left: 0;
+		top: 2px;
+
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 12px;
+			width: 20px;
+			height: 2px;
+			border-radius: 5px;
+			background-color: $color-blue;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 6px;
+			width: 20px;
+			height: 2px;
+			border-radius: 5px;
+			background-color: $color-blue;
+		}
+	}
 }
 
 //.header__content {
