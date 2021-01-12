@@ -1214,6 +1214,22 @@ html, body {
 	}
 }
 
+.contacts__links {
+	& .address__phone:not(:first-of-type) {
+		padding-left: 35px;
+	}
+
+	& .address__phone:first-of-type {
+
+		padding-left: 0;
+
+		&::before {
+			display: none;
+		}
+
+	}
+}
+
 .address__phone, .address__email {
 	&:hover, &:focus {
 		color: $color-blue;

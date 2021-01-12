@@ -4,7 +4,6 @@
 //	}
 //}
 
-//todo мобильное меню добавить, а на ширине меньше 568 в него заказ обратного звонка вернуть
 
 @media screen and (max-width: 1199.98px) {
 	.container {
@@ -156,6 +155,14 @@
 	.type__content img {
 		//margin: 0 auto;
 		width: 100%;
+	}
+
+	.contacts__map {
+		width: 60%;
+	}
+
+	.contacts__links {
+		width: 40%;
 	}
 
 
@@ -404,6 +411,14 @@
 		padding-right: 40px;
 
 
+	}
+
+	.contacts__item:not(:last-child) {
+		margin-bottom: 40px;
+	}
+
+	.contacts__heading {
+		line-height: 1.3;
 	}
 
 
@@ -821,6 +836,23 @@
 	.documents__block:not(:last-child) {
 		margin-bottom: 15px;
 	}
+
+	.contacts__item {
+		flex-direction: column;
+	}
+
+	.contacts__links {
+		width: 100%;
+
+	}
+	.contacts__map {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+
+
+
 
 }
 
