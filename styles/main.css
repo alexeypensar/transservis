@@ -106,6 +106,10 @@ body {
 .header__nav {
   padding-top: 28px;
   padding-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .header__ul {
   width: 100%;
@@ -1492,9 +1496,12 @@ body {
   .header__li_mobile-hide {
     display: none;
   }
-  .header__li_logo {
-    flex-grow: 1;
-    justify-content: flex-start;
+  .header__link_logo {
+    margin-right: auto;
+    width: 90px;
+  }
+  .header__ul {
+    width: auto;
   }
   .header__link_phone {
     margin-right: 15px;
@@ -1571,9 +1578,6 @@ body {
   }
   .header__li_logo {
     max-width: 50%;
-  }
-  .header__li_callback {
-    display: none;
   }
   .header__link_phone {
     white-space: nowrap;
