@@ -1562,6 +1562,11 @@ body {
   .header__ul_active .header__link {
     color: #fff;
   }
+  .header__ul_active .header__link:hover,
+  .header__ul_active .header__link:focus {
+    color: #fff;
+    text-decoration: underline;
+  }
   .header__li_hidden {
     display: flex;
     position: relative;
