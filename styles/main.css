@@ -1075,8 +1075,10 @@ body {
   align-items: center;
 }
 .breadcrumbs__item {
-  margin-right: 44px;
   position: relative;
+}
+.breadcrumbs__item:not(:last-of-type) {
+  margin-right: 44px;
 }
 .breadcrumbs__item:not(:last-of-type)::after {
   content: url("../img/icons/breadcrumbs-arrow-right.svg");
@@ -1317,6 +1319,9 @@ body {
     height: 60px;
     margin-left: 10px;
   }
+  .callback .main-button {
+    height: 60px;
+  }
   .advantages__item {
     width: 30%;
     min-height: 260px;
@@ -1366,6 +1371,19 @@ body {
     bottom: -15px;
     height: 100%;
     margin-top: -30px;
+  }
+  .breadcrumbs {
+    margin-bottom: 30px;
+  }
+  .type__content {
+    flex-direction: column-reverse;
+  }
+  .type__info {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+  .type__content img {
+    width: 100%;
   }
 }
 @media screen and (max-width: 991.98px) {
@@ -1530,6 +1548,12 @@ body {
     width: 100%;
     bottom: 0;
     padding: 30px 20px;
+  }
+  .type__text:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .type__content {
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -1723,6 +1747,12 @@ body {
     margin-bottom: 15px;
     margin-top: 20px;
   }
+  .type__header {
+    padding: 0 30px;
+  }
+  .type__heading {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 575.98px) {
   .header .main-button {
@@ -1798,6 +1828,16 @@ body {
   .address__select {
     width: 100%;
   }
+  .type__header {
+    padding: 0 20px;
+    height: 150px;
+  }
+  .type__heading {
+    font-size: 1.4rem;
+  }
+  .type__header img {
+    width: 100px;
+  }
 }
 @media screen and (max-width: 482px) {
   .services__item:not(.services__item_large) {
@@ -1838,5 +1878,21 @@ body {
   .footer__copyright {
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+  .type__header {
+    position: relative;
+    height: 120px;
+  }
+  .type__header img {
+    width: 80px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+  .breadcrumbs__item:not(:last-of-type) {
+    margin-right: 20px;
+  }
+  .breadcrumbs__item:not(:last-of-type)::after {
+    right: -14px;
   }
 }
