@@ -42,7 +42,9 @@
         </a>
         <ul class="header__ul" id="mobileMenu">
 
-            <li class="header__li_hidden"><button class="mobile-menu__button_close" id="mobileMenuCloseButton"><span></span></button></li>
+            <li class="header__li_hidden">
+                <button class="mobile-menu__button_close" id="mobileMenuCloseButton"><span></span></button>
+            </li>
 
             <li class="header__li header__li_arrow">
                 <a href="#" class="header__link header__link_arrow">Услуги</a>
@@ -76,8 +78,6 @@
             </li>
 
 
-
-
         </ul>
 
         <a href="#" class="header__link header__link_phone">+7 (913) 382-67-40</a>
@@ -86,13 +86,11 @@
     </nav>
 
 
-
-
     <div class="header_left container">
         <!--        <article class="header__content">-->
         <div class="header__headings">
             <h1 class="header__h1">
-            Доставка грузов<br><span class="header__h1_blue">в Якутию</span></h1>
+                Доставка грузов<br><span class="header__h1_blue">в Якутию</span></h1>
 
 
             <h2 class="header__h2">Из любой точки России. Осуществляем все виды перевозок.</h2>
@@ -148,336 +146,335 @@
 </header>
 
 <main>
-        <section class="calculator__wrapper">
-            <div class="calculator container">
+    <section class="calculator__wrapper">
+        <div class="calculator container">
 
-                <h2 class="calculator__heading">Рассчитайте стоимость перевозки прямо сейчас!</h2>
+            <h2 class="calculator__heading">Рассчитайте стоимость перевозки прямо сейчас!</h2>
 
-                <div class="calculator__inputs calculator__inputs_top">
-                    <div class="calculator__inputs_cities">
-                        <input type="text" class="calculator__input calculator__input_split" placeholder="Откуда">
-<!--                        <img src="img/icons/calculator-arrows.svg" alt="стрелки">-->
-                        <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">
-                    </div>
-                    <div class="calculator__inputs_numbers">
-                        <input type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
-                               step="1">
-                        <input type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
-                               step="0.01">
-                    </div>
+            <div class="calculator__inputs calculator__inputs_top">
+                <div class="calculator__inputs_cities">
+                    <input type="text" class="calculator__input calculator__input_split" placeholder="Откуда">
+                    <!--                        <img src="img/icons/calculator-arrows.svg" alt="стрелки">-->
+                    <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">
                 </div>
-                <label class="calculator__label" for="calculatorLength">Габариты самого большого места</label>
-                <div class="calculator__inputs calculator__inputs_bottom">
-
-                    <div class="calculator__inputs_numbers">
-                        <input type="number" class="calculator__input calculator__input_length" placeholder="Длина (м)"
-                               step="0.01" id="calculatorLength">
-                        <input type="number" class="calculator__input calculator__input_width" placeholder="Ширина (м)"
-                               step="0.01">
-                        <input type="number" class="calculator__input calculator__input_height" placeholder="Высота (м)"
-                               step="0.01">
-                    </div>
-
-                    <button class="main-button" type="button">Рассчитать
-                        <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
-                    </button>
-                </div>
-
-                <!--            todo невидимые лейблы добавить инпутам-->
-
-            </div>
-
-            <div class="pricelist container">
-                <p class="pricelist__text">Или посмотрите наш <a class="pricelist__link" href="#">прайс-лист</a></p>
-            </div>
-        </section>
-
-        <section class="advantages container">
-            <h2 class="section__heading">Наши <span>преимущества</span></h2>
-
-            <div class="advantages__list">
-                <article class="advantages__item">
-                    <img src="img/icons/advantages-1.svg" alt="цена">
-                    <p class="advantages__text">
-                        <span>Разумная ценовая политика,</span> которая обеспечена за счет гибких тарифов на перевозку
-                        грузов
-                    </p>
-                </article>
-                <article class="advantages__item">
-                    <img src="img/icons/advantages-2.svg" alt="цена">
-                    <p class="advantages__text">
-                        <span>Минимальные сроки</span>
-                        перевозки грузов благодаря
-                        отработанным схемам
-                        перевозки грузов
-                    </p>
-                </article>
-                <article class="advantages__item">
-                    <img src="img/icons/advantages-3.svg" alt="цена">
-                    <p class="advantages__text">
-                        <span>Высокий уровень сервиса,</span>
-                        призванный подчеркнуть
-                        наше особое отношение к
-                        каждому клиенту
-                    </p>
-                </article>
-                <article class="advantages__item">
-                    <img src="img/icons/advantages-4.svg" alt="цена">
-                    <p class="advantages__text">
-                        Осуществляем
-                        постоянный <span>спутниковый мониторинг</span>
-                        всех грузоперевозок
-                    </p>
-                </article>
-                <article class="advantages__item">
-                    <img src="img/icons/advantages-5.svg" alt="цена">
-                    <p class="advantages__text">
-                        Имеем в своем распоряжении<br>
-                        <span>2 собственных парома</span>
-                    </p>
-                </article>
-                <article class="advantages__item">
-                    <img src="img/icons/advantages-6.svg" alt="цена">
-                    <p class="advantages__text">
-                        Имеем свои собственные <span>логистические центры</span> в Москве и Новосибирске
-                    </p>
-                </article>
-
-            </div>
-        </section>
-
-        <section class="services__wrapper">
-            <div class="services container">
-
-                <div class="services_top">
-                    <div class="services__text">
-                        <h2 class="section__heading">Наши <span>услуги</span></h2>
-                        <p class="services__info">Мы осуществляем все виды перевозок в Якутию. Благодаря нашему большому
-                            опыту и
-                            налаженной системе перевозок,
-                            мы составим оптимальный маршрут,
-                            исходя из ваших финансовых
-                            пожеланий и доставим груз в кратчайшие
-                            сроки.</p>
-                    </div>
-
-                    <article class="services__item services__item_large">
-                        <h3 class="services__heading">Автоперевозки грузов</h3>
-                        <img src="img/icons/services-auto.svg" alt="Автотранспорт">
-                        <p class="services__description">Самый распространенный вид перевозок, благодаря многим факторам.
-                            Это довольно простой в оформлении, приемлемый по стоимости, быстрый и надежный способ доставки
-                            грузов.</p>
-                        <a href="#" class="services__link">подробнее</a>
-
-                    </article>
-                </div>
-
-                <div class="services_bottom">
-
-                    <article class="services__item">
-                        <h3 class="services__heading">Железнодорожные перевозки</h3>
-                        <img src="img/icons/services-railway.svg" alt="Железнодорожный транспорт">
-                        <p class="services__description">Один из самых удобных видов перевозок, так как железнодорожным
-                            транспортом можно отправить практически любые грузы.</p>
-                        <a href="#" class="services__link">подробнее</a>
-                    </article>
-
-                    <article class="services__item">
-                        <h3 class="services__heading">Авиаперевозки грузов</h3>
-                        <img src="img/icons/services-aero.svg" alt="Авиатранспорт">
-                        <p class="services__description">Самый быстрый способ доставки ваших грузов получателю.</p>
-                        <a href="#" class="services__link">подробнее</a>
-                    </article>
-
-                    <article class="services__item">
-                        <h3 class="services__heading">Речные перевозки</h3>
-                        <img src="img/icons/services-river.svg" alt="Речной транспорт">
-                        <p class="services__description">Перевозки грузов судами по внутренним водным путям, как по
-                            естественным (реки, озёра), так и по искусственным (каналы, водохранилища).</p>
-                        <a href="#" class="services__link">подробнее</a>
-                    </article>
-
-                    <article class="services__item">
-                        <h3 class="services__heading">Мультимодальные перевозки</h3>
-                        <img src="img/icons/services-multi.svg" alt="Все виды транспорта">
-                        <p class="services__description">Комбинированная доставка грузов несколькими видами транспорта.</p>
-                        <a href="#" class="services__link">подробнее</a>
-                    </article>
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-        <section class="about-us container">
-
-            <div class="about-us__info">
-                <img src="img/about-us.jpg" class="about-us__image" alt="самолет">
-                <article class="about-us__content">
-                    <h2 class="about-us__heading">Транс-Сервис</h2>
-                    <p class="about-us__text">ООО “Транс-сервис” - стабильная компания, которая работает для вас с 2005
-                        года. Мы зарекомендовали себя как надеждного и долгосрочного партнера. Будем рады видеть вас в рядах
-                        наших клиентов!</p>
-                    <a href="#" class="about-us__link">подробнее<img src="img/icons/arrow-right-red.svg"
-                                                                     alt="стрелка вправо">
-                    </a>
-                </article>
-            </div>
-
-            <div class="about-us__numbers">
-                <div class="about-us__number">
-                    <span>20</span>
-                    <p>На рынке уже 20 лет</p>
-                </div>
-
-                <div class="about-us__number">
-                    <span>12</span>
-                    <p>12 компаний - партнёров</p>
-                </div>
-
-                <div class="about-us__number">
-                    <span>3</span>
-                    <p>3 собственных склада</p>
-                </div>
-
-                <div class="about-us__number">
-                    <span>50000</span>
-                    <p>50000 тонн груза перевезено</p>
+                <div class="calculator__inputs_numbers">
+                    <input type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
+                           step="1">
+                    <input type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
+                           step="0.01">
                 </div>
             </div>
+            <label class="calculator__label" for="calculatorLength">Габариты самого большого места</label>
+            <div class="calculator__inputs calculator__inputs_bottom">
 
+                <div class="calculator__inputs_numbers">
+                    <input type="number" class="calculator__input calculator__input_length" placeholder="Длина (м)"
+                           step="0.01" id="calculatorLength">
+                    <input type="number" class="calculator__input calculator__input_width" placeholder="Ширина (м)"
+                           step="0.01">
+                    <input type="number" class="calculator__input calculator__input_height" placeholder="Высота (м)"
+                           step="0.01">
+                </div>
 
-        </section>
-
-        <form class="callback container" action="callback.php" method="post">
-
-            <h2 class="callback__heading">Получить консультацию</h2>
-
-
-            <div class="calculator__inputs_numbers callback__inputs">
-
-                <input type="text" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
-                       step="1">
-                <input type="tel" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
-                       step="0.01">
-
-
-                <button class="main-button" type="submit">Отправить
+                <button class="main-button" type="button">Рассчитать
                     <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
                 </button>
             </div>
 
-            <p class="callback__text">Заполняя эту форму, вы соглашаетесь с <a href="policy.html" class="callback__link">политикой
-                хранения и обработкой ваших персональных данных</a></p>
+            <!--            todo невидимые лейблы добавить инпутам-->
 
-        </form>
+        </div>
 
-        <section class="our-clients container">
+        <div class="pricelist container">
+            <p class="pricelist__text">Или посмотрите наш <a class="pricelist__link" href="#">прайс-лист</a></p>
+        </div>
+    </section>
 
-            <h2 class="section__heading">Нам <span>доверяют</span></h2>
+    <section class="advantages container">
+        <h2 class="section__heading">Наши <span>преимущества</span></h2>
 
-            <button class="embla__button embla__button_prev" id="emblaButtonPrev">
-                <img src="img/icons/embla-arrow-left.svg" alt="">
-            </button>
+        <div class="advantages__list">
+            <article class="advantages__item">
+                <img src="img/icons/advantages-1.svg" alt="цена">
+                <p class="advantages__text">
+                    <span>Разумная ценовая политика,</span> которая обеспечена за счет гибких тарифов на перевозку
+                    грузов
+                </p>
+            </article>
+            <article class="advantages__item">
+                <img src="img/icons/advantages-2.svg" alt="цена">
+                <p class="advantages__text">
+                    <span>Минимальные сроки</span>
+                    перевозки грузов благодаря
+                    отработанным схемам
+                    перевозки грузов
+                </p>
+            </article>
+            <article class="advantages__item">
+                <img src="img/icons/advantages-3.svg" alt="цена">
+                <p class="advantages__text">
+                    <span>Высокий уровень сервиса,</span>
+                    призванный подчеркнуть
+                    наше особое отношение к
+                    каждому клиенту
+                </p>
+            </article>
+            <article class="advantages__item">
+                <img src="img/icons/advantages-4.svg" alt="цена">
+                <p class="advantages__text">
+                    Осуществляем
+                    постоянный <span>спутниковый мониторинг</span>
+                    всех грузоперевозок
+                </p>
+            </article>
+            <article class="advantages__item">
+                <img src="img/icons/advantages-5.svg" alt="цена">
+                <p class="advantages__text">
+                    Имеем в своем распоряжении<br>
+                    <span>2 собственных парома</span>
+                </p>
+            </article>
+            <article class="advantages__item">
+                <img src="img/icons/advantages-6.svg" alt="цена">
+                <p class="advantages__text">
+                    Имеем свои собственные <span>логистические центры</span> в Москве и Новосибирске
+                </p>
+            </article>
 
-            <div class="embla" id="embla">
+        </div>
+    </section>
 
-                <div class="embla__container">
+    <section class="services__wrapper">
+        <div class="services container">
 
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/1.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/2.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/3.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/4.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/5.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/6.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/7.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/8.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/9.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/10.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/11.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/12.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/13.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/14.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/15.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/16.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/17.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/18.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/19.png" alt="">
-                    </div>
-
-                    <div class="embla__slide">
-                        <img class="embla__slide__img" src="img/clients/20.png" alt="">
-                    </div>
-
-
+            <div class="services_top">
+                <div class="services__text">
+                    <h2 class="section__heading">Наши <span>услуги</span></h2>
+                    <p class="services__info">Мы осуществляем все виды перевозок в Якутию. Благодаря нашему большому
+                        опыту и
+                        налаженной системе перевозок,
+                        мы составим оптимальный маршрут,
+                        исходя из ваших финансовых
+                        пожеланий и доставим груз в кратчайшие
+                        сроки.</p>
                 </div>
 
+                <article class="services__item services__item_large">
+                    <h3 class="services__heading">Автоперевозки грузов</h3>
+                    <img src="img/icons/services-auto.svg" alt="Автотранспорт">
+                    <p class="services__description">Самый распространенный вид перевозок, благодаря многим факторам.
+                        Это довольно простой в оформлении, приемлемый по стоимости, быстрый и надежный способ доставки
+                        грузов.</p>
+                    <a href="#" class="services__link">подробнее</a>
+
+                </article>
             </div>
-            <button class="embla__button embla__button_next" id="emblaButtonNext">
-                <img src="img/icons/embla-arrow-right.svg" alt="">
+
+            <div class="services_bottom">
+
+                <article class="services__item">
+                    <h3 class="services__heading">Железнодорожные перевозки</h3>
+                    <img src="img/icons/services-railway.svg" alt="Железнодорожный транспорт">
+                    <p class="services__description">Один из самых удобных видов перевозок, так как железнодорожным
+                        транспортом можно отправить практически любые грузы.</p>
+                    <a href="#" class="services__link">подробнее</a>
+                </article>
+
+                <article class="services__item">
+                    <h3 class="services__heading">Авиаперевозки грузов</h3>
+                    <img src="img/icons/services-aero.svg" alt="Авиатранспорт">
+                    <p class="services__description">Самый быстрый способ доставки ваших грузов получателю.</p>
+                    <a href="#" class="services__link">подробнее</a>
+                </article>
+
+                <article class="services__item">
+                    <h3 class="services__heading">Речные перевозки</h3>
+                    <img src="img/icons/services-river.svg" alt="Речной транспорт">
+                    <p class="services__description">Перевозки грузов судами по внутренним водным путям, как по
+                        естественным (реки, озёра), так и по искусственным (каналы, водохранилища).</p>
+                    <a href="#" class="services__link">подробнее</a>
+                </article>
+
+                <article class="services__item">
+                    <h3 class="services__heading">Мультимодальные перевозки</h3>
+                    <img src="img/icons/services-multi.svg" alt="Все виды транспорта">
+                    <p class="services__description">Комбинированная доставка грузов несколькими видами транспорта.</p>
+                    <a href="#" class="services__link">подробнее</a>
+                </article>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section class="about-us container">
+
+        <div class="about-us__info">
+            <img src="img/about-us.jpg" class="about-us__image" alt="самолет">
+            <article class="about-us__content">
+                <h2 class="about-us__heading">Транс-Сервис</h2>
+                <p class="about-us__text">ООО “Транс-сервис” - стабильная компания, которая работает для вас с 2005
+                    года. Мы зарекомендовали себя как надеждного и долгосрочного партнера. Будем рады видеть вас в рядах
+                    наших клиентов!</p>
+                <a href="#" class="about-us__link">подробнее<img src="img/icons/arrow-right-red.svg"
+                                                                 alt="стрелка вправо">
+                </a>
+            </article>
+        </div>
+
+        <div class="about-us__numbers">
+            <div class="about-us__number">
+                <span>20</span>
+                <p>На рынке уже 20 лет</p>
+            </div>
+
+            <div class="about-us__number">
+                <span>12</span>
+                <p>12 компаний - партнёров</p>
+            </div>
+
+            <div class="about-us__number">
+                <span>3</span>
+                <p>3 собственных склада</p>
+            </div>
+
+            <div class="about-us__number">
+                <span>50000</span>
+                <p>50000 тонн груза перевезено</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <form class="callback container" action="callback.php" method="post">
+
+        <h2 class="callback__heading">Получить консультацию</h2>
+
+
+        <div class="calculator__inputs_numbers callback__inputs">
+
+            <input type="text" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
+                   step="1">
+            <input type="tel" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
+                   step="0.01">
+
+
+            <button class="main-button" type="submit">Отправить
+                <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
             </button>
+        </div>
+
+        <p class="callback__text">Заполняя эту форму, вы соглашаетесь с <a href="policy.html" class="callback__link">политикой
+            хранения и обработкой ваших персональных данных</a></p>
+
+    </form>
+
+    <section class="our-clients container">
+
+        <h2 class="section__heading">Нам <span>доверяют</span></h2>
+
+        <button class="embla__button embla__button_prev" id="emblaButtonPrev">
+            <img src="img/icons/embla-arrow-left.svg" alt="">
+        </button>
+
+        <div class="embla" id="embla">
+
+            <div class="embla__container">
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/1.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/2.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/3.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/4.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/5.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/6.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/7.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/8.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/9.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/10.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/11.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/12.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/13.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/14.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/15.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/16.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/17.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/18.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/19.png" alt="">
+                </div>
+
+                <div class="embla__slide">
+                    <img class="embla__slide__img" src="img/clients/20.png" alt="">
+                </div>
 
 
+            </div>
 
-        </section>
+        </div>
+        <button class="embla__button embla__button_next" id="emblaButtonNext">
+            <img src="img/icons/embla-arrow-right.svg" alt="">
+        </button>
+
+
+    </section>
 
 </main>
 
