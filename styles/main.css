@@ -457,10 +457,12 @@ body {
   border-radius: 4px;
 }
 .calculator__input_split:first-child {
-  margin-right: -20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
-.calculator__input_split:nth-child(3) {
-  margin-left: -20px;
+.calculator__input_split:nth-child(2) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .calculator__input_weight {
   width: 210px;
