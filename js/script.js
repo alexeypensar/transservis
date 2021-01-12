@@ -1,6 +1,17 @@
 "use strict";
 
 
+//mobile menu
+
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+
+mobileMenuButton.addEventListener('click', function() {
+    mobileMenu.classList.toggle('header__ul_active');
+    mobileMenuButton.classList.toggle('mobile-menu__button_active');
+});
+
+
 //questions page
 
 let questions = Array.from(document.getElementsByClassName('questions__item'));
