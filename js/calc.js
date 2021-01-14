@@ -2,25 +2,11 @@
 'use strict';
 
 
-let minPrice = 0;
-let time = 0;
-//
-// let weight = 0;
-// let volume = 0;
-
 let length = 0;
 let width = 0;
 let height = 0;
 
-// let fromTo = '';
-
-
-
-
-
-
-
-
+// прайс - авто из Москвы в Якутск
 const autoMY = [
     {
         minPrice: 1500,
@@ -30,31 +16,7 @@ const autoMY = [
 ];
 
 
-
-// const autoNY = [
-//     {
-//         fromTo: 'NY',
-//         minPrice: 1000,
-//         time: '8 - 9 дней'
-//     },
-//     {
-//         1: 6000,
-//         3: 5700,
-//         5: 5500,
-//         10: 5400,
-//         15: 5300,
-//         16: 5200
-//     },
-//     {
-//         200: 28,
-//         600: 26,
-//         1000: 25.5,
-//         2000: 25,
-//         3000: 24.5,
-//         3001: 24
-//     }
-// ];
-
+// прайс - контейнер из Москвы в Якутск
 const containerMY = [
     {
         minPrice: 700,
@@ -63,6 +25,7 @@ const containerMY = [
 
 ];
 
+// прайс - контейнер из Новосибирска в Якутск
 const containerNY = [
     {
         minPrice: 500,
@@ -71,9 +34,8 @@ const containerNY = [
 
 ];
 
-
+// прайс - авто из Новосибирска в Якутск
 const autoNY = {
-    fromTo: 'NY',
     minPrice: 1000,
     time: '8 - 9 дней',
     volumePrice: [6000, 5700, 5500, 5400, 5300, 5200],
@@ -82,14 +44,15 @@ const autoNY = {
 
 
 
-// let fromTo = NY;
+let calc = function(type, weight, volume) {
 
-let calc = function(weight, volume) {
 
-    volume = prompt('введите объём');
-    weight = prompt('введите вес');
+    volume = +prompt('введите объём');
+    weight = +prompt('введите вес');
 
     let factVolume = volume * 1.1;
+
+    console.log('расчётный объём: ' + factVolume);
 
     let basePrice;
 
@@ -99,7 +62,7 @@ let calc = function(weight, volume) {
     // по объёму:
     if (weight / factVolume < 215) {
 
-        basePrice = autoNY.volumePrice;
+        basePrice = type.volumePrice;
 
         console.log('по объёму');
 
@@ -126,7 +89,7 @@ let calc = function(weight, volume) {
     // по весу:
     else {
 
-        basePrice = autoNY.weightPrice;
+        basePrice = type.weightPrice;
 
         console.log('по весу');
 
@@ -150,15 +113,15 @@ let calc = function(weight, volume) {
         }
     }
 
-    if (resultPrice < autoNY.minPrice) {
-        resultPrice = autoNY.minPrice;
+    if (resultPrice < type.minPrice) {
+        resultPrice = type.minPrice;
         console.log('едем по минималке');
     }
 
     alert(resultPrice.toFixed());
 
-    
+
 };
 
 
-calc();
+calc(autoNY);
