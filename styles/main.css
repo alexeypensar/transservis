@@ -451,6 +451,7 @@ body {
   padding: 23px 10px 23px 30px;
   height: 70px;
   border: 1px solid #f2f2f2;
+  background-color: #fff;
 }
 .calculator__input_split {
   width: 250px;
@@ -1022,6 +1023,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: #fff;
 }
 .address__select_wrapper {
   position: relative;

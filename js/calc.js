@@ -76,15 +76,10 @@ let calcAuto = function (type, weight, volume) {
     weight = +calcWeight.value;
     volume = +calcVolume.value;
 
-    // this.weight = weight;
-    // this.volume = volume;
 
-    // volume = +prompt('введите объём');
-    // weight = +prompt('введите вес');
 
     let factVolume = (volume * 1.1).toFixed(2);
 
-    // console.log('расчётный объём: ' + factVolume);
 
     let basePrice;
 
@@ -96,7 +91,6 @@ let calcAuto = function (type, weight, volume) {
 
         basePrice = type.volumePrice;
 
-        // console.log('по объёму');
 
         if (factVolume < 1) {
             resultPrice = factVolume * basePrice[0];
@@ -118,8 +112,6 @@ let calcAuto = function (type, weight, volume) {
 
         basePrice = type.weightPrice;
 
-        // console.log('по весу');
-
         if (weight < 200) {
             resultPrice = weight * basePrice[0];
         } else if (weight >= 200 && weight < 600) {
@@ -137,7 +129,6 @@ let calcAuto = function (type, weight, volume) {
 
     if (resultPrice < type.minPrice) {
         resultPrice = type.minPrice;
-        // console.log('едем по минималке');
     }
 
     calcAutoPrice.innerText = resultPrice.toFixed().toString();
@@ -173,7 +164,6 @@ let calcContainer = function (type, weight, volume) {
 
         basePrice = type.volumePrice;
 
-        // console.log('по объёму');
 
         if (factVolume <= 2 && factVolumeToWeight > 240) {
             resultPrice = factVolume * basePrice[0];
@@ -234,7 +224,6 @@ let calcContainer = function (type, weight, volume) {
 
         basePrice = type.weightPrice;
 
-        // console.log('по весу');
 
         if (weight <= 500 && factVolumeToWeight > 400) {
             resultPrice = weight * basePrice[0];
@@ -291,10 +280,8 @@ let calcContainer = function (type, weight, volume) {
 
     if (resultPrice < type.minPrice) {
         resultPrice = type.minPrice;
-        // console.log('едем по минималке');
-    }
 
-    // alert(resultPrice.toFixed());
+    }
 
 
     calcContainerPrice.innerText = resultPrice.toFixed().toString();
@@ -302,9 +289,6 @@ let calcContainer = function (type, weight, volume) {
 };
 
 
-// calcAuto(autoMY);
-
-// calcContainer(containerMY);
 
 
 
@@ -324,7 +308,7 @@ calcButton.addEventListener('click', function() {
 
     if (calcTestErrors === 0) {
 
-        
+
         if (calcFrom.value === 'Novosibirsk') {
             calcAuto(autoNY);
             calcContainer(containerNY);
