@@ -1881,6 +1881,9 @@ body {
     width: 100%;
     margin-left: 0;
   }
+  .calculator__results {
+    margin-top: 20px;
+  }
   .calculator__results table {
     max-width: 100%;
   }
