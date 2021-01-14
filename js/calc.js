@@ -12,7 +12,7 @@ let length = 0;
 let width = 0;
 let height = 0;
 
-let fromTo = '';
+// let fromTo = '';
 
 
 
@@ -80,26 +80,85 @@ const autoNY = {
     weightPrice: [28, 26, 25.5, 25, 24.5, 24]
 };
 
-let volume = prompt('введите объём');
-let weight = prompt('введите вес');
 
-let calc = function(weight, volume, fromTo) {
+
+// let fromTo = NY;
+
+let calc = function(weight, volume) {
+
+    volume = prompt('введите объём');
+    weight = prompt('введите вес');
+
     let factVolume = volume * 1.1;
 
     let basePrice;
 
-    if (weight/factVolume < 215) {
-        // считаем по объему
-        basePrice = autoNY.volumePrice;
-    }
-    else {
-        // считаем по весу
-        basePrice = autoNY.weightPrice;
-    }
-
     let resultPrice = 0;
 
+
+    // по объёму:
+    if (weight / factVolume < 215) {
+
+        basePrice = autoNY.volumePrice;
+
+        console.log('по объёму');
+
+        if (factVolume < 1) {
+            resultPrice = factVolume * basePrice[0];
+        }
+        else if (factVolume >= 1 && factVolume < 3) {
+            resultPrice = factVolume * basePrice[1];
+        }
+        else if (factVolume >= 3 && factVolume < 5) {
+            resultPrice = factVolume * basePrice[2];
+        }
+        else if (factVolume >= 5 && factVolume < 10) {
+            resultPrice = factVolume * basePrice[3];
+        }
+        else if (factVolume >= 10 && factVolume < 15) {
+            resultPrice = factVolume * basePrice[4];
+        }
+        else if (factVolume >= 15) {
+            resultPrice = factVolume * basePrice[5];
+        }
+    }
+
+    // по весу:
+    else {
+
+        basePrice = autoNY.weightPrice;
+
+        console.log('по весу');
+
+        if (weight < 200) {
+            resultPrice = weight * basePrice[0];
+        }
+        else if (weight >= 200 && weight < 600) {
+            resultPrice = weight * basePrice[1];
+        }
+        else if (weight >= 600 && weight < 1000) {
+            resultPrice = weight * basePrice[2];
+        }
+        else if (weight >= 1000 && weight < 2000) {
+            resultPrice = weight * basePrice[3];
+        }
+        else if (weight >= 2000 && weight < 3000) {
+            resultPrice = weight * basePrice[4];
+        }
+        else if (weight >= 3000) {
+            resultPrice = weight * basePrice[5];
+        }
+    }
+
+    if (resultPrice < autoNY.minPrice) {
+        resultPrice = autoNY.minPrice;
+        console.log('едем по минималке');
+    }
+
+    alert(resultPrice.toFixed());
+
     
-
-
 };
+
+
+calc();
