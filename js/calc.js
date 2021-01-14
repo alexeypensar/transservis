@@ -7,35 +7,17 @@ let width = 0;
 let height = 0;
 
 // прайс - авто из Москвы в Якутск
-const autoMY = [
-    {
-        minPrice: 1500,
-        time: '12 - 13 дней'
-    }
-
-];
-
-
-// прайс - контейнер из Москвы в Якутск
-const containerMY = [
-    {
-        minPrice: 700,
-        time: 'по запросу'
-    }
-
-];
-
-// прайс - контейнер из Новосибирска в Якутск
-const containerNY = [
-    {
-        minPrice: 500,
-        time: 'по запросу'
-    }
-
-];
+const autoMY = {
+    volumeToWeight: 215,
+    minPrice: 1500,
+    time: '12 - 13 дней',
+    volumePrice: [9600, 9200, 8900, 8700, 8600, 8500],
+    weightPrice: [44, 42.5, 41, 40, 39.5, 39]
+};
 
 // прайс - авто из Новосибирска в Якутск
 const autoNY = {
+    volumeToWeight: 215,
     minPrice: 1000,
     time: '8 - 9 дней',
     volumePrice: [6000, 5700, 5500, 5400, 5300, 5200],
@@ -43,8 +25,29 @@ const autoNY = {
 };
 
 
+// прайс - контейнер из Москвы в Якутск
+const containerMY = [
+    {
+        volumeToWeight: 280,
+        minPrice: 700,
+        time: 'по запросу',
+        
+    }
 
-let calc = function(type, weight, volume) {
+];
+
+// прайс - контейнер из Новосибирска в Якутск
+const containerNY = [
+    {
+        volumeToWeight: 280,
+        minPrice: 500,
+        time: 'по запросу'
+    }
+
+];
+
+
+let calc = function (type, weight, volume) {
 
 
     volume = +prompt('введите объём');
@@ -60,7 +63,7 @@ let calc = function(type, weight, volume) {
 
 
     // по объёму:
-    if (weight / factVolume < 215) {
+    if (weight / factVolume < type.volumeToWeight) {
 
         basePrice = type.volumePrice;
 
@@ -68,20 +71,15 @@ let calc = function(type, weight, volume) {
 
         if (factVolume < 1) {
             resultPrice = factVolume * basePrice[0];
-        }
-        else if (factVolume >= 1 && factVolume < 3) {
+        } else if (factVolume >= 1 && factVolume < 3) {
             resultPrice = factVolume * basePrice[1];
-        }
-        else if (factVolume >= 3 && factVolume < 5) {
+        } else if (factVolume >= 3 && factVolume < 5) {
             resultPrice = factVolume * basePrice[2];
-        }
-        else if (factVolume >= 5 && factVolume < 10) {
+        } else if (factVolume >= 5 && factVolume < 10) {
             resultPrice = factVolume * basePrice[3];
-        }
-        else if (factVolume >= 10 && factVolume < 15) {
+        } else if (factVolume >= 10 && factVolume < 15) {
             resultPrice = factVolume * basePrice[4];
-        }
-        else if (factVolume >= 15) {
+        } else if (factVolume >= 15) {
             resultPrice = factVolume * basePrice[5];
         }
     }
@@ -95,20 +93,15 @@ let calc = function(type, weight, volume) {
 
         if (weight < 200) {
             resultPrice = weight * basePrice[0];
-        }
-        else if (weight >= 200 && weight < 600) {
+        } else if (weight >= 200 && weight < 600) {
             resultPrice = weight * basePrice[1];
-        }
-        else if (weight >= 600 && weight < 1000) {
+        } else if (weight >= 600 && weight < 1000) {
             resultPrice = weight * basePrice[2];
-        }
-        else if (weight >= 1000 && weight < 2000) {
+        } else if (weight >= 1000 && weight < 2000) {
             resultPrice = weight * basePrice[3];
-        }
-        else if (weight >= 2000 && weight < 3000) {
+        } else if (weight >= 2000 && weight < 3000) {
             resultPrice = weight * basePrice[4];
-        }
-        else if (weight >= 3000) {
+        } else if (weight >= 3000) {
             resultPrice = weight * basePrice[5];
         }
     }
@@ -124,4 +117,4 @@ let calc = function(type, weight, volume) {
 };
 
 
-calc(autoNY);
+calc(autoMY);
