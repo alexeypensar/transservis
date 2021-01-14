@@ -60,6 +60,9 @@ let calcAutoPrice = document.getElementById('calcAutoPrice');
 let calcAutoTime = document.getElementById('calcAutoTime');
 let calcContainerPrice = document.getElementById('calcContainerPrice');
 
+let calcWeight = document.getElementById('calcWeight');
+let calcVolume = document.getElementById('calcVolume');
+
 
 // let length = 0;
 // let width = 0;
@@ -70,8 +73,8 @@ let calcContainerPrice = document.getElementById('calcContainerPrice');
 // калькулятор для автоперевозок:
 
 let calcAuto = function (type, weight, volume) {
-    weight = +document.getElementById('calcWeight').value;
-    volume = +document.getElementById('calcVolume').value;
+    weight = +calcWeight.value;
+    volume = +calcVolume.value;
 
     // this.weight = weight;
     // this.volume = volume;
@@ -140,7 +143,7 @@ let calcAuto = function (type, weight, volume) {
     calcAutoPrice.innerText = resultPrice.toFixed().toString();
     calcAutoTime.innerText = type.time;
 
-    // alert(resultPrice.toFixed());
+
 
 
 };
@@ -148,15 +151,13 @@ let calcAuto = function (type, weight, volume) {
 // калькулятор для контейнерных перевозок:
 let calcContainer = function (type, weight, volume) {
 
-    weight = +document.getElementById('calcWeight').value;
-    volume = +document.getElementById('calcVolume').value;
+    weight = +calcWeight.value;
+    volume = +calcVolume.value;
 
-    // volume = +prompt('введите объём');
-    // weight = +prompt('введите вес');
+
 
     let factVolume = (volume * 1.1).toFixed(2);
 
-    // console.log('расчётный объём: ' + factVolume);
 
     let basePrice;
 
@@ -310,18 +311,39 @@ let calcContainer = function (type, weight, volume) {
 
 calcButton.addEventListener('click', function() {
 
-    if (calcFrom.value === 'Novosibirsk') {
-        calcAuto(autoNY);
-        calcContainer(containerNY);
+    let calcTest = [calcFrom, calcTo, calcWeight, calcVolume];
+    let calcTestErrors = 0;
+
+    for (let i = 0; i < calcTest.length; i++) {
+
+        if (calcTest[i].value === '') {
+            // calcTest[i].style.border = '1px solid red';
+            calcTestErrors += 1;
+        }
     }
 
-    else if (calcFrom.value === 'Moscow') {
-        calcAuto(autoMY);
-        calcContainer(containerMY);
+    if (calcTestErrors === 0) {
+
+        
+        if (calcFrom.value === 'Novosibirsk') {
+            calcAuto(autoNY);
+            calcContainer(containerNY);
+        }
+
+        else if (calcFrom.value === 'Moscow') {
+            calcAuto(autoMY);
+            calcContainer(containerMY);
+        }
+
+        calcResults.style.display = 'block';
+        calcResults.scrollIntoView();
     }
 
-    calcResults.style.display = 'block';
-    calcResults.scrollIntoView();
+    else {
+        alert('Заполните все поля');
+    }
+
+
 
 
 });
