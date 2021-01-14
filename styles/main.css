@@ -1876,9 +1876,21 @@ body {
   .calculator__input {
     font-size: 0.7rem;
   }
-  .calculator .main-button {
+  .calculator .main-button,
+  .calculator__results .main-button {
     width: 100%;
     margin-left: 0;
+  }
+  .calculator__results table {
+    max-width: 100%;
+  }
+  .calculator__results tbody td,
+  .calculator__results thead td {
+    font-size: 0.8rem;
+    padding: 10px;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
   }
   .advantages__item {
     padding: 20px 15px;
