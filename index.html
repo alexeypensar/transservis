@@ -153,8 +153,19 @@
 
             <div class="calculator__inputs calculator__inputs_top">
                 <div class="calculator__inputs_cities">
-                    <input type="text" class="calculator__input calculator__input_split" placeholder="Откуда">
-                    <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">
+<!--                    <input type="text" class="calculator__input calculator__input_split" placeholder="Откуда">-->
+
+                    <select class="calculator__select calculator__input calculator__input_split" name="calcFrom" id="calcFrom">
+                        <option value="from" selected disabled>Откуда</option>
+                        <option value="Novosibirsk">Новосибирск</option>
+                        <option value="Moscow">Москва</option>
+                    </select>
+
+                    <select class="calculator__select calculator__input calculator__input_split" name="calcTo" id="calcTo">
+                        <option value="from" selected disabled>Куда</option>
+                        <option value="Novosibirsk">Якутск</option>
+                    </select>
+<!--                    <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">-->
                 </div>
                 <div class="calculator__inputs_numbers">
                     <input type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
@@ -184,9 +195,47 @@
 
         </div>
 
+
+
+
         <div class="pricelist container">
             <p class="pricelist__text">Или посмотрите наш <a class="pricelist__link" href="prices.html">прайс-лист</a></p>
         </div>
+
+        <div class="calculator__results container">
+            <table class="calculator__table">
+                <thead>
+                <tr>
+                    <td>Тип доставки</td>
+                    <td>Стоимость</td>
+                    <td>Срок</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Автотранспорт</td>
+                    <td id="calcAutoPrice"></td>
+                    <td id="calcAutoTime"></td>
+                </tr>
+                <tr>
+                    <td>Контейнер</td>
+                    <td id="calcContainerPrice"></td>
+                    <td>по запросу</td>
+                </tr>
+                <tr>
+                    <td>Авиадоставка</td>
+                    <td>по запросу</td>
+                    <td>по запросу</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p class="calculator__info">Точную стоимость и сроки, а также саму возможность перевозки рекомендуем уточнять у наших менеджеров - самостоятельно или оставив заявку. Наши
+                <a href="contacts.html">контакты</a></p>
+
+            <button class="main-button">Оформить заявку<img src="img/icons/arrow-right.svg" alt="стрелка вправо"></button>
+        </div>
+
     </section>
 
     <section class="advantages container">

@@ -449,6 +449,7 @@ html, body {
 	background-color: $color-lightgray;
 	padding-top: 65px;
 	padding-bottom: 65px;
+
 	//height: 400px;
 }
 
@@ -460,6 +461,7 @@ html, body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+
 }
 
 
@@ -559,12 +561,67 @@ html, body {
 	}
 }
 
+.calculator__select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 .calculator__label {
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 150%;
 	color: #FFFFFF;
 	margin-bottom: 2px;
+}
+
+
+.calculator__results {
+	margin-top: 50px;
+	display: none;
+
+	& table {
+		border-collapse: collapse;
+		margin-bottom: 35px;
+	}
+
+	& thead td {
+		font-weight: 600;
+		font-size: 1.125rem;
+		line-height: 140%;
+		color: $color-darkblue;
+		width: 240px;
+		height: 70px;
+		border: none;
+	}
+
+
+	& tbody td {
+		width: 240px;
+		height: 70px;
+		//border: 1px solid $color-darkblue;
+		padding: 25px 30px;
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 20px;
+		color: $color-darkblue;
+		border: 1px solid $color-darkblue;
+
+	}
+
+
+}
+
+.calculator__info {
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 140%;
+	margin-bottom: 33px;
+
+	& a {
+		text-transform: uppercase;
+		color: $color-darkblue;
+	}
 }
 
 .pricelist__text {

@@ -491,12 +491,54 @@ body {
   border-top-right-radius: 4px;
   border-left: none;
 }
+.calculator__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .calculator__label {
   font-weight: 400;
   font-size: 1rem;
   line-height: 150%;
   color: #fff;
   margin-bottom: 2px;
+}
+.calculator__results {
+  margin-top: 50px;
+  display: none;
+}
+.calculator__results table {
+  border-collapse: collapse;
+  margin-bottom: 35px;
+}
+.calculator__results thead td {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 140%;
+  color: #0b1f3e;
+  width: 240px;
+  height: 70px;
+  border: none;
+}
+.calculator__results tbody td {
+  width: 240px;
+  height: 70px;
+  padding: 25px 30px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #0b1f3e;
+  border: 1px solid #0b1f3e;
+}
+.calculator__info {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  margin-bottom: 33px;
+}
+.calculator__info a {
+  text-transform: uppercase;
+  color: #0b1f3e;
 }
 .pricelist__text {
   text-transform: uppercase;
