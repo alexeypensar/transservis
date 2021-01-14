@@ -51,6 +51,9 @@ const containerNY = {
 // console.log(weight);
 
 
+let calcFrom = document.getElementById('calcFrom');
+let calcTo = document.getElementById('calcTo');
+
 let calcButton = document.getElementById('calcButton');
 let calcResults = document.getElementById('calcResults');
 let calcAutoPrice = document.getElementById('calcAutoPrice');
@@ -307,13 +310,17 @@ let calcContainer = function (type, weight, volume) {
 
 calcButton.addEventListener('click', function() {
 
-    // console.log('вес: ' + weight);
-    // console.log('объём: ' + volume);
-    calcAuto(autoNY);
-    calcContainer(containerNY);
+    if (calcFrom.value === 'Novosibirsk') {
+        calcAuto(autoNY);
+        calcContainer(containerNY);
+    }
+
+    else if (calcFrom.value === 'Moscow') {
+        calcAuto(autoMY);
+        calcContainer(containerMY);
+    }
 
     calcResults.style.display = 'block';
-
     calcResults.scrollIntoView();
 
 
