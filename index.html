@@ -168,9 +168,9 @@
 <!--                    <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">-->
                 </div>
                 <div class="calculator__inputs_numbers">
-                    <input type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
+                    <input id="calcWeight" type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
                            step="1">
-                    <input type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
+                    <input id="calcVolume" type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
                            step="0.01">
                 </div>
             </div>
@@ -186,7 +186,7 @@
                            step="0.01">
                 </div>
 
-                <button class="main-button" type="button">Рассчитать
+                <button id="calcButton" class="main-button" type="button">Рассчитать
                     <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
                 </button>
             </div>
@@ -202,7 +202,7 @@
             <p class="pricelist__text">Или посмотрите наш <a class="pricelist__link" href="prices.html">прайс-лист</a></p>
         </div>
 
-        <div class="calculator__results container">
+        <div class="calculator__results container" id="calcResults">
             <table class="calculator__table">
                 <thead>
                 <tr>
@@ -695,5 +695,6 @@
 </script>
 
 <script src="js/script.js"></script>
+<script src="js/calc.js"></script>
 </body>
 </html>

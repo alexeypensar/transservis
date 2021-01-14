@@ -1,14 +1,6 @@
 //calculator
 'use strict';
 
-
-
-
-
-let length = 0;
-let width = 0;
-let height = 0;
-
 // прайс - авто из Москвы в Якутск
 const autoMY = {
     volumeToWeight: 215,
@@ -46,85 +38,122 @@ const containerNY = {
     weightPrice: [15, 16, 17, 18, 14.8, 15.15, 16, 17, 14.5, 14.8, 15.5, 16, 14, 14.5, 14.8, 15]
 };
 
+
+
+
+
+
+
+// weight.addEventListener('change', function() {
+//     console.log(weight.value);
+// })
+//
+// console.log(weight);
+
+
+let calcButton = document.getElementById('calcButton');
+let calcResults = document.getElementById('calcResults');
+let calcAutoPrice = document.getElementById('calcAutoPrice');
+let calcAutoTime = document.getElementById('calcAutoTime');
+let calcContainerPrice = document.getElementById('calcContainerPrice');
+
+
+// let length = 0;
+// let width = 0;
+// let height = 0;
+
+
+
 // калькулятор для автоперевозок:
 
-// let calcAuto = function (type, weight, volume) {
-//
-//     volume = +prompt('введите объём');
-//     weight = +prompt('введите вес');
-//
-//     let factVolume = (volume * 1.1).toFixed(2);
-//
-//     console.log('расчётный объём: ' + factVolume);
-//
-//     let basePrice;
-//
-//     let resultPrice = 0;
-//
-//
-//     // по объёму:
-//     if (weight / factVolume < type.volumeToWeight) {
-//
-//         basePrice = type.volumePrice;
-//
-//         console.log('по объёму');
-//
-//         if (factVolume < 1) {
-//             resultPrice = factVolume * basePrice[0];
-//         } else if (factVolume >= 1 && factVolume < 3) {
-//             resultPrice = factVolume * basePrice[1];
-//         } else if (factVolume >= 3 && factVolume < 5) {
-//             resultPrice = factVolume * basePrice[2];
-//         } else if (factVolume >= 5 && factVolume < 10) {
-//             resultPrice = factVolume * basePrice[3];
-//         } else if (factVolume >= 10 && factVolume < 15) {
-//             resultPrice = factVolume * basePrice[4];
-//         } else if (factVolume >= 15) {
-//             resultPrice = factVolume * basePrice[5];
-//         }
-//     }
-//
-//     // по весу:
-//     else {
-//
-//         basePrice = type.weightPrice;
-//
-//         console.log('по весу');
-//
-//         if (weight < 200) {
-//             resultPrice = weight * basePrice[0];
-//         } else if (weight >= 200 && weight < 600) {
-//             resultPrice = weight * basePrice[1];
-//         } else if (weight >= 600 && weight < 1000) {
-//             resultPrice = weight * basePrice[2];
-//         } else if (weight >= 1000 && weight < 2000) {
-//             resultPrice = weight * basePrice[3];
-//         } else if (weight >= 2000 && weight < 3000) {
-//             resultPrice = weight * basePrice[4];
-//         } else if (weight >= 3000) {
-//             resultPrice = weight * basePrice[5];
-//         }
-//     }
-//
-//     if (resultPrice < type.minPrice) {
-//         resultPrice = type.minPrice;
-//         console.log('едем по минималке');
-//     }
-//
-//     alert(resultPrice.toFixed());
-//
-//
-// };
+let calcAuto = function (type, weight, volume) {
+    weight = +document.getElementById('calcWeight').value;
+    volume = +document.getElementById('calcVolume').value;
+
+    // this.weight = weight;
+    // this.volume = volume;
+
+    // volume = +prompt('введите объём');
+    // weight = +prompt('введите вес');
+
+    let factVolume = (volume * 1.1).toFixed(2);
+
+    // console.log('расчётный объём: ' + factVolume);
+
+    let basePrice;
+
+    let resultPrice = 0;
+
+
+    // по объёму:
+    if (weight / factVolume < type.volumeToWeight) {
+
+        basePrice = type.volumePrice;
+
+        // console.log('по объёму');
+
+        if (factVolume < 1) {
+            resultPrice = factVolume * basePrice[0];
+        } else if (factVolume >= 1 && factVolume < 3) {
+            resultPrice = factVolume * basePrice[1];
+        } else if (factVolume >= 3 && factVolume < 5) {
+            resultPrice = factVolume * basePrice[2];
+        } else if (factVolume >= 5 && factVolume < 10) {
+            resultPrice = factVolume * basePrice[3];
+        } else if (factVolume >= 10 && factVolume < 15) {
+            resultPrice = factVolume * basePrice[4];
+        } else if (factVolume >= 15) {
+            resultPrice = factVolume * basePrice[5];
+        }
+    }
+
+    // по весу:
+    else {
+
+        basePrice = type.weightPrice;
+
+        // console.log('по весу');
+
+        if (weight < 200) {
+            resultPrice = weight * basePrice[0];
+        } else if (weight >= 200 && weight < 600) {
+            resultPrice = weight * basePrice[1];
+        } else if (weight >= 600 && weight < 1000) {
+            resultPrice = weight * basePrice[2];
+        } else if (weight >= 1000 && weight < 2000) {
+            resultPrice = weight * basePrice[3];
+        } else if (weight >= 2000 && weight < 3000) {
+            resultPrice = weight * basePrice[4];
+        } else if (weight >= 3000) {
+            resultPrice = weight * basePrice[5];
+        }
+    }
+
+    if (resultPrice < type.minPrice) {
+        resultPrice = type.minPrice;
+        // console.log('едем по минималке');
+    }
+
+    calcAutoPrice.innerText = resultPrice.toFixed().toString();
+    calcAutoTime.innerText = type.time;
+
+    // alert(resultPrice.toFixed());
+
+
+};
 
 // калькулятор для контейнерных перевозок:
 let calcContainer = function (type, weight, volume) {
 
-    volume = +prompt('введите объём');
-    weight = +prompt('введите вес');
+    weight = +document.getElementById('calcWeight').value;
+    volume = +document.getElementById('calcVolume').value;
+
+    // volume = +prompt('введите объём');
+    // weight = +prompt('введите вес');
 
     let factVolume = (volume * 1.1).toFixed(2);
 
-    console.log('расчётный объём: ' + factVolume);
+    // console.log('расчётный объём: ' + factVolume);
 
     let basePrice;
 
@@ -140,7 +169,7 @@ let calcContainer = function (type, weight, volume) {
 
         basePrice = type.volumePrice;
 
-        console.log('по объёму');
+        // console.log('по объёму');
 
         if (factVolume <= 2 && factVolumeToWeight > 240) {
             resultPrice = factVolume * basePrice[0];
@@ -201,7 +230,7 @@ let calcContainer = function (type, weight, volume) {
 
         basePrice = type.weightPrice;
 
-        console.log('по весу');
+        // console.log('по весу');
 
         if (weight <= 500 && factVolumeToWeight > 400) {
             resultPrice = weight * basePrice[0];
@@ -258,15 +287,34 @@ let calcContainer = function (type, weight, volume) {
 
     if (resultPrice < type.minPrice) {
         resultPrice = type.minPrice;
-        console.log('едем по минималке');
+        // console.log('едем по минималке');
     }
 
-    alert(resultPrice.toFixed());
+    // alert(resultPrice.toFixed());
 
+
+    calcContainerPrice.innerText = resultPrice.toFixed().toString();
 
 };
 
 
 // calcAuto(autoMY);
 
-calcContainer(containerMY);
+// calcContainer(containerMY);
+
+
+
+
+calcButton.addEventListener('click', function() {
+
+    // console.log('вес: ' + weight);
+    // console.log('объём: ' + volume);
+    calcAuto(autoNY);
+    calcContainer(containerNY);
+
+    calcResults.style.display = 'block';
+
+    calcResults.scrollIntoView();
+
+
+});
