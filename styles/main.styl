@@ -1252,6 +1252,9 @@ html, body {
 	text-decoration: none;
 	color: #FFFFFF;
 	display: flex;
+	//width: auto;
+	//justify-content: stretch;
+	//width: 100%;
 	& img {
 		padding-right: 10px;
 	}
@@ -1281,6 +1284,18 @@ html, body {
 .contacts__links {
 	& .address__phone:not(:first-of-type) {
 		padding-left: 35px;
+	}
+
+	& .address__phone, & .address__email {
+
+
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: $color-darkblue;
+			transition: all 0.3s ease;
+		}
+
+
 	}
 
 	& .address__phone:first-of-type {
