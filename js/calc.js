@@ -43,6 +43,7 @@ const containerNY = {
     weightPrice: [15, 16, 17, 18, 14.8, 15.15, 16, 17, 14.5, 14.8, 15.5, 16, 14, 14.5, 14.8, 15]
 };
 
+// калькулятор для автоперевозок:
 
 // let calcAuto = function (type, weight, volume) {
 //
@@ -112,7 +113,7 @@ const containerNY = {
 //
 // };
 
-
+// калькулятор для контейнерных перевозок:
 let calcContainer = function (type, weight, volume) {
 
     volume = +prompt('введите объём');
@@ -265,4 +266,4 @@ let calcContainer = function (type, weight, volume) {
 
 // calcAuto(autoMY);
 
-calcContainer(containerNY);
+calcContainer(containerMY);

@@ -1551,7 +1551,7 @@ body {
     margin-top: 30px;
   }
   .footer__inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .footer__info {
     width: 100%;
