@@ -1619,4 +1619,72 @@ html, body {
 }
 
 
+#myModal {
+	& .hystmodal__window {
+		padding: 60px 80px;
+		background: $blue-gradient;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	& h2 {
+		font-weight: 700;
+		font-size: 2.625rem;
+		line-height: 150%;
+		margin-bottom: 15px;
+	}
+
+	& p:first-of-type {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 150%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	& input, & textarea {
+		width: 100%;
+		margin-bottom: 30px;
+		padding: 23px 10px 23px 30px;
+		border: 1px solid $color-border;
+		background-color: #FFFFFF;
+		border-radius: 4px;
+
+	}
+
+	& input {
+		height: 70px;
+	}
+
+	& textarea {
+		height: 160px;
+	}
+
+
+	& p:last-of-type {
+		font-size: 0.75rem;
+		line-height: 150%;
+		margin-bottom: 35px;
+	}
+
+	& a {
+		color: #FFF;
+		text-decoration: underline;
+	}
+
+	& .main-button {
+		width: 100%;
+	}
+
+	& .hystmodal__close {
+		right: 25px;
+		top: 25px;
+	}
+
+}
+
+
 @import '__adaptive.styl';

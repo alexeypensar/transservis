@@ -1342,6 +1342,59 @@ body {
 .contacts__map img {
   object-fit: cover;
 }
+#myModal .hystmodal__window {
+  padding: 60px 80px;
+  background: linear-gradient(to right, #133975 0%, #0b1f3e 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#myModal h2 {
+  font-weight: 700;
+  font-size: 2.625rem;
+  line-height: 150%;
+  margin-bottom: 15px;
+}
+#myModal p:first-of-type {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#myModal input,
+#myModal textarea {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 23px 10px 23px 30px;
+  border: 1px solid #f2f2f2;
+  background-color: #fff;
+  border-radius: 4px;
+}
+#myModal input {
+  height: 70px;
+}
+#myModal textarea {
+  height: 160px;
+}
+#myModal p:last-of-type {
+  font-size: 0.75rem;
+  line-height: 150%;
+  margin-bottom: 35px;
+}
+#myModal a {
+  color: #fff;
+  text-decoration: underline;
+}
+#myModal .main-button {
+  width: 100%;
+}
+#myModal .hystmodal__close {
+  right: 25px;
+  top: 25px;
+}
 @media screen and (max-width: 1199.98px) {
   .container {
     max-width: 992px;
