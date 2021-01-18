@@ -139,45 +139,37 @@
 
             <div class="calculator__inputs calculator__inputs_top">
                 <div class="calculator__inputs_cities">
-                    <!--                    <input type="text" class="calculator__input calculator__input_split" placeholder="Откуда">-->
-
+                    <label for="calcFrom" class="visually-hidden"></label>
                     <select class="calculator__select calculator__input calculator__input_split" name="calcFrom" id="calcFrom">
                         <option value="" selected disabled>Откуда</option>
                         <option value="Novosibirsk">Новосибирск</option>
                         <option value="Moscow">Москва</option>
                     </select>
-
+                    <label for="calcTo" class="visually-hidden"></label>
                     <select class="calculator__select calculator__input calculator__input_split" name="calcTo" id="calcTo">
                         <option value="" selected disabled>Куда</option>
                         <option value="Novosibirsk">Якутск</option>
                     </select>
-                    <!--                    <input type="text" class="calculator__input calculator__input_split" placeholder="Куда">-->
                 </div>
                 <div class="calculator__inputs_numbers">
+                    <label for="calcWeight" class="visually-hidden"></label>
                     <input id="calcWeight" type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
                            step="1">
+                    <label for="calcVolume" class="visually-hidden"></label>
                     <input id="calcVolume" type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
                            step="0.01">
                 </div>
             </div>
-            <label class="calculator__label" for="calculatorLength">Габариты самого большого места</label>
             <div class="calculator__inputs calculator__inputs_bottom">
 
-                <div class="calculator__inputs_numbers">
-                    <input type="number" class="calculator__input calculator__input_length" placeholder="Длина (м)"
-                           step="0.01" id="calculatorLength">
-                    <input type="number" class="calculator__input calculator__input_width" placeholder="Ширина (м)"
-                           step="0.01">
-                    <input type="number" class="calculator__input calculator__input_height" placeholder="Высота (м)"
-                           step="0.01">
-                </div>
 
+                <p class="calculator__negab">Стоимость перевозки негабаритного груза увеличивается на 20%.<br>
+                    Груз считается негабаритным, если сумма 3х линейных размеров превышает 3 метра, либо если вес одного места превышает 1200кг.</p>
                 <button id="calcButton" class="main-button" type="button">Рассчитать
                     <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
                 </button>
             </div>
 
-            <!--            todo невидимые лейблы добавить инпутам-->
 
         </div>
 
