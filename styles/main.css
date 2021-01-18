@@ -130,6 +130,21 @@ body {
 }
 .header__li_arrow {
   position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  padding-right: 8px;
+  margin-right: 8px;
+}
+.header__li_arrow::after {
+  content: url("../img/icons/arrow-down.svg");
+  position: absolute;
+  top: 3px;
+  right: -10px;
+  height: 35px;
+}
+.header__li_arrow:hover {
+  cursor: default;
 }
 .header__submenu {
   position: absolute;
@@ -213,8 +228,9 @@ body {
 .header__link_arrow::after {
   content: url("../img/icons/arrow-down.svg");
   position: absolute;
-  top: -3px;
+  top: 3px;
   right: -10px;
+  height: 35px;
 }
 .header__link_callback {
   font-weight: 500;
@@ -1548,7 +1564,7 @@ body {
     padding-right: 4px;
   }
   .header__link_arrow::after {
-    top: -2px;
+    top: 6px;
   }
   .calculator__wrapper {
     padding-top: 30px;
@@ -1810,7 +1826,10 @@ body {
     align-items: flex-start;
     height: auto;
   }
-  .header__link_arrow::after {
+  .header__li_arrow {
+    color: #fff;
+  }
+  .header__li_arrow::after {
     display: none;
   }
   .header__submenu {
@@ -1824,6 +1843,8 @@ body {
     background-color: transparent;
     padding-top: 0;
     position: static;
+    border: none;
+    box-shadow: none;
   }
   .header__submenu_about::before {
     display: none;

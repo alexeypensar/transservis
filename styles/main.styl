@@ -61,7 +61,24 @@ html, body {
 
 .header__li_arrow {
 	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $color-black;
+	padding-right: 8px;
+	margin-right: 8px;
+	&::after {
+		content: url('../img/icons/arrow-down.svg');
+		position: absolute;
+		top: 3px;
+		right: -10px;
+		height: 35px;
+	}
+
+	&:hover {
+		cursor: default;
+	}
 }
+
 
 .header__submenu {
 	position: absolute;
@@ -104,9 +121,7 @@ html, body {
 .header__li_arrow {
 	&:hover, &:focus {
 
-		& .header__link_arrow::after {
 
-		}
 
 		& .header__submenu {
 			display: flex;
@@ -163,8 +178,9 @@ html, body {
 	&::after {
 		content: url('../img/icons/arrow-down.svg');
 		position: absolute;
-		top: -3px;
+		top: 3px;
 		right: -10px;
+		height: 35px;
 	}
 }
 
