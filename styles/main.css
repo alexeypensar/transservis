@@ -442,6 +442,11 @@ body {
   line-height: 150%;
   margin-bottom: 30px;
 }
+.calculator__negab {
+  color: #fff;
+  display: inline-block;
+  width: 60%;
+}
 .calculator__inputs {
   display: flex;
   flex-direction: row;
@@ -1366,6 +1371,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 #myModal h2 {
   font-weight: 700;
@@ -1401,6 +1407,7 @@ body {
   font-size: 0.75rem;
   line-height: 150%;
   margin-bottom: 35px;
+  text-align: left;
 }
 #myModal a {
   color: #fff;
@@ -1883,6 +1890,9 @@ body {
   .calculator .main-button {
     margin-top: 20px;
   }
+  .calculator__negab {
+    width: 100%;
+  }
   .advantages__item {
     min-height: 250px;
   }
@@ -2064,6 +2074,17 @@ body {
   .contacts__map {
     width: 100%;
     margin-top: 20px;
+  }
+  #myModal .hystmodal__window {
+    padding: 20px;
+  }
+  #myModal .hystmodal__window h2 {
+    line-height: 1.2;
+    font-size: 1.8rem;
+  }
+  #myModal .hystmodal__close {
+    top: 5px;
+    right: 5px;
   }
 }
 @media screen and (max-width: 482px) {
