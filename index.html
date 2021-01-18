@@ -29,6 +29,7 @@
     <meta name="theme-color" content="#9CC2CE">
 
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/hystmodal.min.css">
 
 
 </head>
@@ -74,7 +75,7 @@
                 <a href="contacts.html" class="header__link main-link">Контакты</a>
             </li>
             <li class="header__li header__li_callback">
-                <a href="#" class="header__link main-link">Заказать звонок</a>
+                <a href="#" data-hystmodal="#myModal" class="header__link main-link">Заказать звонок</a>
             </li>
 
 
@@ -144,6 +145,15 @@
 
 
 </header>
+
+<div class="hystmodal" id="myModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">Close</button>
+            <!-- You modal HTML markup -->
+        </div>
+    </div>
+</div>
 
 <main>
     <section class="calculator__wrapper">
@@ -695,5 +705,15 @@
 
 <script src="js/script.js"></script>
 <script src="js/calc.js"></script>
+<script src="js/hystmodal.min.js"></script>
+
+<script>
+    const myModal = new HystModal({
+        linkAttributeName: "data-hystmodal",
+        //settings (optional). see Configuration
+    });
+</script>
+
+
 </body>
 </html>
