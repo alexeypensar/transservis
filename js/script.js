@@ -7,14 +7,34 @@ const mobileMenuButton = document.getElementById('mobileMenuButton');
 const mobileMenuCloseButton = document.getElementById('mobileMenuCloseButton');
 const mobileMenu = document.getElementById('mobileMenu');
 
+const shadow = document.getElementById('shadow');
+
 mobileMenuButton.addEventListener('click', function() {
     mobileMenu.classList.toggle('header__ul_active');
+    shadow.style.display = 'flex';
 });
 
 mobileMenuCloseButton.addEventListener('click', function() {
     mobileMenu.classList.toggle('header__ul_active');
+    shadow.style.display = 'none';
 });
 
+
+//closing mobile menu on click to link
+let mobileMenuLinks = Array.from(document.getElementsByClassName('header__link'));
+
+mobileMenuLinks.forEach(function(el) {
+    el.addEventListener('click', function() {
+        mobileMenu.classList.remove('header__ul_active');
+        shadow.style.display = 'none';
+    })
+});
+
+
+shadow.addEventListener('click', function() {
+    mobileMenu.classList.remove('header__ul_active');
+    shadow.style.display = 'none';
+})
 
 
 
