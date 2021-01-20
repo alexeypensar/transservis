@@ -6,8 +6,8 @@ const autoMY = {
     volumeToWeight: 215,
     minPrice: 1500,
     time: '12 - 13 дней',
-    volumePrice: [9600, 9200, 8900, 8700, 8600, 8500],
-    weightPrice: [44, 42.5, 41, 40, 39.5, 39]
+    volumePrice: [8500, 8200, 8000, 7800, 7600, 7500],
+    weightPrice: [40, 39.5, 39, 38.5, 38, 37]
 };
 
 // прайс - авто из Новосибирска в Якутск
@@ -15,8 +15,8 @@ const autoNY = {
     volumeToWeight: 215,
     minPrice: 1000,
     time: '8 - 9 дней',
-    volumePrice: [6000, 5700, 5500, 5400, 5300, 5200],
-    weightPrice: [28, 26, 25.5, 25, 24.5, 24]
+    volumePrice: [6000, 5500, 5300, 5100, 5000, 4900],
+    weightPrice: [25, 24, 23.75, 23.5, 23.25, 23]
 };
 
 
@@ -62,12 +62,6 @@ let calcContainerPrice = document.getElementById('calcContainerPrice');
 
 let calcWeight = document.getElementById('calcWeight');
 let calcVolume = document.getElementById('calcVolume');
-
-
-// let length = 0;
-// let width = 0;
-// let height = 0;
-
 
 
 // калькулятор для автоперевозок:
