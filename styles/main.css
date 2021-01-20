@@ -1549,13 +1549,17 @@ body {
     top: 0;
     left: -9px;
   }
-  .header__link {
+  .header__link,
+  .header__li_arrow {
     font-size: 0.8rem;
   }
-  .header__link_arrow {
+  .header__link_phone {
+    font-weight: 700;
+  }
+  .header__li_arrow {
     padding-right: 4px;
   }
-  .header__link_arrow::after {
+  .header__li_arrow::after {
     top: 6px;
   }
   .calculator__wrapper {
@@ -2076,6 +2080,9 @@ body {
     width: 100%;
     margin-top: 20px;
   }
+  .address__phone:not(:last-child) {
+    margin-bottom: 15px;
+  }
   #myModal .hystmodal__window {
     padding: 20px;
   }
@@ -2156,5 +2163,8 @@ body {
   .railway__heading,
   .multimodal__heading {
     font-size: 1.2rem;
+  }
+  .footer__link_large {
+    margin-top: 10px;
   }
 }
