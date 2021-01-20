@@ -90,9 +90,11 @@
             <button data-hystclose class="hystmodal__close">Close</button>
             <h2>Оставьте заявку</h2>
             <p>Мы свяжемся с Вами в ближайшее время!</p>
-
-            <input type="text" name="modalName" placeholder="Ваше имя">
+            <label for="modalName" class="visually-hidden">Ваше имя:</label>
+            <input type="text" id="modalName" name="modalName" placeholder="Ваше имя">
+            <label for="modalPhone" class="visually-hidden">Ваш телефон:</label>
             <input type="tel" name="modalPhone" id="modalPhone" placeholder="Ваш телефон">
+            <label for="modalTextarea" class="visually-hidden">Комментарий:</label>
             <textarea name="modalTextarea" id="modalTextarea" cols="30" rows="10">Комментарий</textarea>
 
             <p>Заполняя эту форму, вы соглашаетесь с <a href="policy.html" target="_blank">политикой хранения
@@ -141,23 +143,23 @@
 
             <div class="calculator__inputs calculator__inputs_top">
                 <div class="calculator__inputs_cities">
-                    <label for="calcFrom" class="visually-hidden"></label>
+                    <label for="calcFrom" class="visually-hidden">Откуда:</label>
                     <select class="calculator__select calculator__input calculator__input_split" name="calcFrom" id="calcFrom">
                         <option value="" selected disabled>Откуда</option>
                         <option value="Novosibirsk">Новосибирск</option>
                         <option value="Moscow">Москва</option>
                     </select>
-                    <label for="calcTo" class="visually-hidden"></label>
+                    <label for="calcTo" class="visually-hidden">Куда:</label>
                     <select class="calculator__select calculator__input calculator__input_split" name="calcTo" id="calcTo">
                         <option value="" selected disabled>Куда</option>
                         <option value="Novosibirsk">Якутск</option>
                     </select>
                 </div>
                 <div class="calculator__inputs_numbers">
-                    <label for="calcWeight" class="visually-hidden"></label>
+                    <label for="calcWeight" class="visually-hidden">Вес:</label>
                     <input id="calcWeight" type="number" class="calculator__input calculator__input_weight" placeholder="Вес (кг)"
                            step="1">
-                    <label for="calcVolume" class="visually-hidden"></label>
+                    <label for="calcVolume" class="visually-hidden">Объём:</label>
                     <input id="calcVolume" type="number" class="calculator__input calculator__input_volume" placeholder="Объём (м3)"
                            step="0.01">
                 </div>
@@ -278,10 +280,11 @@
 
 
         <div class="calculator__inputs_numbers callback__inputs">
-
-            <input type="text" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
+            <label for="callbackName" class="visually-hidden">Ваше имя:</label>
+            <input type="text" id="callbackName" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
                    step="1">
-            <input type="tel" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
+            <label for="callbackPhone" class="visually-hidden">Ваш телефон:</label>
+            <input type="tel" id="callbackPhone" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
                    step="0.01">
 
 
