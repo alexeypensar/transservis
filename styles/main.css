@@ -1354,7 +1354,7 @@ body {
 #myModal {
   z-index: 9997;
 }
-#myModal .hystmodal__window {
+#myModal .hystmodal__form {
   padding: 60px 80px;
   background: linear-gradient(to right, #133975 0%, #0b1f3e 100%);
   color: #fff;
