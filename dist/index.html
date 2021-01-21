@@ -146,7 +146,7 @@
 <div class="hystmodal" id="myModal" aria-hidden="true">
     <div class="hystmodal__wrap">
         <div class="hystmodal__window" role="dialog" aria-modal="true">
-            <form class="hystmodal__form" method="post" onsubmit="send(event, 'mail/callback.php')">
+            <form class="hystmodal__form" method="post" onsubmit="send(event, 'PHPMailer/send.php')">
                 <button data-hystclose class="hystmodal__close">Close</button>
                 <h2>Оставьте заявку</h2>
                 <p>Мы свяжемся с Вами в ближайшее время!</p>
@@ -412,7 +412,7 @@
 
     </section>
 
-    <form class="callback container" method="post" onsubmit="send(event, 'mail/callback.php')">
+    <form class="callback container" method="post" onsubmit="send(event, 'PHPMailer/send.php')">
 
         <h2 class="callback__heading">Получить консультацию</h2>
 
@@ -752,7 +752,7 @@
             else {alert("Ошибка сервера. Номер: "+req.status);}};
 
 
-        // req.onerror = function() {alert("Ошибка отправки запроса");};
+        req.onerror = function() {alert("Ошибка отправки запроса");};
         req.send(new FormData(event.target));
     }
 </script>
