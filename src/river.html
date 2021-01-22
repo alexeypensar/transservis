@@ -106,22 +106,43 @@
 <div class="hystmodal" id="myModal" aria-hidden="true">
     <div class="hystmodal__wrap">
         <div class="hystmodal__window" role="dialog" aria-modal="true">
-            <button data-hystclose class="hystmodal__close">Close</button>
-            <h2>Оставьте заявку</h2>
-            <p>Мы свяжемся с Вами в ближайшее время!</p>
-            <label for="modalName" class="visually-hidden">Ваше имя:</label>
-            <input type="text" id="modalName" name="modalName" placeholder="Ваше имя">
-            <label for="modalPhone" class="visually-hidden">Ваш телефон:</label>
-            <input type="tel" name="modalPhone" id="modalPhone" placeholder="Ваш телефон">
-            <label for="modalTextarea" class="visually-hidden">Комментарий:</label>
-            <textarea name="modalTextarea" id="modalTextarea" cols="30" rows="10">Комментарий</textarea>
+            <form class="hystmodal__form" method="post" onsubmit="send(event, 'PHPMailer/send.php')">
+                <button data-hystclose class="hystmodal__close">Close</button>
+                <h2>Оставьте заявку</h2>
+                <p>Мы свяжемся с Вами в ближайшее время!</p>
+                <label for="modalName" class="visually-hidden">Ваше имя:</label>
+                <input type="text" id="modalName" name="name" placeholder="Ваше имя">
+                <label for="modalPhone" class="visually-hidden">Ваш телефон:</label>
+                <input type="tel" name="phone" id="modalPhone" placeholder="Ваш телефон">
+                <label for="modalTextarea" class="visually-hidden">Комментарий:</label>
+                <textarea name="comment" id="modalTextarea" cols="30" rows="10">Комментарий</textarea>
 
-            <p>Заполняя эту форму, вы соглашаетесь с <a href="policy.html" target="_blank">политикой хранения
-                и обработкой ваших персональных данных</a></p>
+                <p>Заполняя эту форму, вы соглашаетесь с <a href="policy.html" target="_blank">политикой хранения
+                    и обработкой ваших персональных данных</a></p>
 
-            <button id="modalButton" class="main-button" type="submit">Отправить
-                <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
-            </button>
+                <button id="modalButton" class="main-button" type="submit">Отправить
+                    <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="hystmodal" id="modalSuccess" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <div class="modal__thanks">
+
+                <button data-hystclose class="hystmodal__close">Close</button>
+
+                <img src="img/icons/logo.svg" alt="Транссервис">
+
+
+                <h3>Спасибо за заявку!</h3>
+
+                <p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+            </div>
+
         </div>
     </div>
 </div>
