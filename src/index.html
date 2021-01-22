@@ -168,6 +168,25 @@
     </div>
 </div>
 
+<div class="hystmodal hystmodal__success" id="modalSuccess" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+
+            <button data-hystclose class="hystmodal__close">Close</button>
+
+            <div class="modal-success_top">
+                <p>Транс-Сервис</p>
+            </div>
+
+            <div class="modal-success_bottom">
+                <h2>Спасибо за заявку!</h2>
+
+                <p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <main>
     <section class="calculator__wrapper">
         <div class="calculator container">
@@ -720,6 +739,12 @@
         catchFocus: false
         //settings (optional). see Configuration
     });
+
+    const successModal = new HystModal({
+        linkAttributeName: 'data-hystmodal-success',
+        catchFocus: false,
+        backscroll: false
+    });
 </script>
 
 <script>
@@ -739,7 +764,7 @@
                     // Если сообщение отправлено
                     myModal.close();
 
-                    alert('Сообщение отправлено. Наши менеджеры свяжутся с Вами в ближайшее время.')
+                    setTimeout(successModal.open('#modalSuccess'), 1000);
 
                     // alert("Сообщение отправлено");
                 }
