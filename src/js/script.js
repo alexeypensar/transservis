@@ -63,7 +63,6 @@ let cityPhone2 = document.getElementById('cityPhone2');
 
 
 
-
 footerSelect.addEventListener('change', function() {
     if (footerSelect.value === 'Novosibirsk') {
         cityAddress.textContent = 'ул. Новая Заря 2А корп.6';
