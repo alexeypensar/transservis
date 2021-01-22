@@ -44,10 +44,10 @@ try {
     $mail->Password = '27continentstK';
 
 
-    $mail->setFrom('trans-servis-website@yandex.ru'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('trans-servis-website@yandex.ru', 'Транс-Сервис'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-
+    $mail->addAddress('urry25@mail.ru');
     $mail->addAddress('info@pensar.ru'); // Ещё один, если нужен
 
 
