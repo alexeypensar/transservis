@@ -5,9 +5,9 @@ use PHPMailer\SMTP;
 use PHPMailer\Exception;
 
 
-require 'PHPMailer.php';
-require 'SMTP.php';
-require 'Exception.php';
+require_once 'PHPMailer.php';
+require_once 'SMTP.php';
+require_once 'Exception.php';
 
 
 $name = $_POST['name'];
@@ -29,7 +29,10 @@ $mail = new PHPMailer\PHPMailer(true);
 try {
 
     $mail->IsSMTP();
-    $mail->SMTPDebug = 2;
+//    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = function ($str, $level) {
+        $GLOBALS['status'][] = $str;
+    };
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = "ssl";
     $mail->Host = "ssl://smtp.yandex.ru";

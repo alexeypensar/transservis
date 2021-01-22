@@ -4,18 +4,18 @@ use PHPMailer\PHPMailer;
 use PHPMailer\SMTP;
 use PHPMailer\Exception;
 
-// Файлы phpmailer
-require 'PHPMailer.php';
-require 'SMTP.php';
-require 'Exception.php';
 
-// Переменные, которые отправляет пользователь
+require_once 'PHPMailer.php';
+require_once 'SMTP.php';
+require_once 'Exception.php';
+
+
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $comment = $_POST['comment'];
 
 
-// Формирование самого письма
+
 $title = "Транс-Сервис - обращение с сайта";
 $body = "
 <h2>Обращение с сайта Транс-Сервис:</h2>
@@ -24,35 +24,25 @@ $body = "
 <b>Сообщение:</b><br>$comment
 ";
 
-// Настройки PHPMailer
+
 $mail = new PHPMailer\PHPMailer(true);
 try {
 
     $mail->IsSMTP();
-    $mail->SMTPDebug = 2;
+//    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = function ($str, $level) {
+        $GLOBALS['status'][] = $str;
+    };
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = "ssl";
     $mail->Host = "ssl://smtp.yandex.ru";
     $mail->Port = 465;
 
-//    $mail->isSMTP();
+
     $mail->CharSet = "UTF-8";
-//    $mail->SMTPAuth = true;
-    //$mail->SMTPDebug = 2;
-//    $mail->Debugoutput = function ($str, $level) {
-//        $GLOBALS['status'][] = $str;
-//    };
-
-    // Настройки вашей почты
-
-//    $mail->Host = 'ssl://smtp.yandex.ru';
-//    $mail->Port = 465;
     $mail->Username = 'trans-servis-website@yandex.ru';
     $mail->Password = '27continentstK';
 
-//    $mail->STARTTLS = 25;
-//    $mail->SMTPSecure = 'ssl';
-//    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 
     $mail->setFrom('trans-servis-website@yandex.ru'); // Адрес самой почты и имя отправителя
 
