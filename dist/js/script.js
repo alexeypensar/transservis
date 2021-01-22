@@ -77,4 +77,4 @@ footerSelect.addEventListener('change', function () {
     // cityPhone4.style.visibility = 'hidden';
     // cityPhone4.style.pointerEvents = 'none';
   }
-}); // todo во всех футерах и хэдерах на всех страницах всё проверить, дёрнуть с index.html
+});

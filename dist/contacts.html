@@ -41,6 +41,7 @@
         <a href="index.html" class="header__link header__link_logo">
             <img src="img/icons/logo.svg" alt="Транссервис">
         </a>
+        <div class="shadow" id="shadow"></div>
         <ul class="header__ul" id="mobileMenu">
 
             <li class="header__li_hidden">
@@ -84,25 +85,63 @@
 
 </header>
 
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(45186354, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+        trackHash:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45186354" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 <div class="hystmodal" id="myModal" aria-hidden="true">
     <div class="hystmodal__wrap">
         <div class="hystmodal__window" role="dialog" aria-modal="true">
-            <button data-hystclose class="hystmodal__close">Close</button>
-            <h2>Оставьте заявку</h2>
-            <p>Мы свяжемся с Вами в ближайшее время!</p>
-            <label for="modalName" class="visually-hidden">Ваше имя:</label>
-            <input type="text" id="modalName" name="modalName" placeholder="Ваше имя">
-            <label for="modalPhone" class="visually-hidden">Ваш телефон:</label>
-            <input type="tel" name="modalPhone" id="modalPhone" placeholder="Ваш телефон">
-            <label for="modalTextarea" class="visually-hidden">Комментарий:</label>
-            <textarea name="modalTextarea" id="modalTextarea" cols="30" rows="10">Комментарий</textarea>
+            <form class="hystmodal__form" method="post" onsubmit="send(event, 'PHPMailer/send.php')">
+                <button data-hystclose class="hystmodal__close">Close</button>
+                <h2>Оставьте заявку</h2>
+                <p>Мы свяжемся с Вами в ближайшее время!</p>
+                <label for="modalName" class="visually-hidden">Ваше имя:</label>
+                <input type="text" id="modalName" name="name" placeholder="Ваше имя">
+                <label for="modalPhone" class="visually-hidden">Ваш телефон:</label>
+                <input type="tel" name="phone" id="modalPhone" placeholder="Ваш телефон">
+                <label for="modalTextarea" class="visually-hidden">Комментарий:</label>
+                <textarea name="comment" id="modalTextarea" cols="30" rows="10">Комментарий</textarea>
 
-            <p>Заполняя эту форму, вы соглашаетесь с <a href="policy.html" target="_blank">политикой хранения
-                и обработкой ваших персональных данных</a></p>
+                <p>Заполняя эту форму, вы соглашаетесь с <a href="policy.html" target="_blank">политикой хранения
+                    и обработкой ваших персональных данных</a></p>
 
-            <button id="modalButton" class="main-button" type="submit">Отправить
-                <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
-            </button>
+                <button id="modalButton" class="main-button" type="submit">Отправить
+                    <img src="img/icons/arrow-right.svg" alt="стрелка вправо">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="hystmodal" id="modalSuccess" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <div class="modal__thanks">
+
+                <button data-hystclose class="hystmodal__close">Close</button>
+
+                <img src="img/icons/logo.svg" alt="Транссервис">
+
+
+                <h3>Спасибо за заявку!</h3>
+
+                <p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+            </div>
+
         </div>
     </div>
 </div>
@@ -187,17 +226,17 @@
 
 
 
-    <form class="callback container" action="callback.php" method="post">
+    <form class="callback container" method="post" onsubmit="send(event, 'PHPMailer/send.php')">
 
         <h2 class="callback__heading">Получить консультацию</h2>
 
 
         <div class="calculator__inputs_numbers callback__inputs">
             <label for="callbackName" class="visually-hidden">Ваше имя:</label>
-            <input type="text" id="callbackName" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
+            <input type="text" id="callbackName" name="name" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
                    step="1">
             <label for="callbackPhone" class="visually-hidden">Ваш телефон:</label>
-            <input type="tel" id="callbackPhone" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
+            <input type="tel" id="callbackPhone" name="phone" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
                    step="0.01">
 
 
@@ -224,6 +263,7 @@
 
                 <div class="footer__logo">
                     <a href="#" title="наверх"><img src="img/icons/logo.svg" alt="Транс-Сервис"></a>
+
                 </div>
 
                 <nav class="footer__nav">
@@ -245,7 +285,7 @@
                     <ul class="footer__ul">
                         <li class="footer__li footer__li_large">О нас</li>
                         <li class="footer__li"><a href="about-us.html" class="footer__link main-link">О компании</a></li>
-<!--                        <li class="footer__li"><a href="#" class="footer__link main-link">Реквизиты</a></li>-->
+                        <!--                        <li class="footer__li"><a href="" class="footer__link main-link">Реквизиты</a></li>-->
                         <li class="footer__li"><a href="documents.html" class="footer__link main-link">Документы</a></li>
                         <li class="footer__li"><a href="questions.html" class="footer__link main-link">Вопрос-Ответ</a></li>
                     </ul>
@@ -301,6 +341,50 @@
         catchFocus: false
         //settings (optional). see Configuration
     });
+
+    const successModal = new HystModal({
+        linkAttributeName: 'data-hystmodal-success',
+        catchFocus: false,
+        backscroll: false
+    });
+</script>
+
+<script>
+    // Отправка данных на сервер
+    function send(event, php) {
+        console.log("Отправка запроса");
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+        var req = new XMLHttpRequest();
+        req.open('POST', php, true);
+        req.onload = function () {
+            if (req.status >= 200 && req.status < 400) {
+                json = JSON.parse(this.response);
+                console.log(json);
+
+                // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+                if (json.result == "success") {
+                    // Если сообщение отправлено
+                    myModal.close();
+
+                    setTimeout(successModal.open('#modalSuccess'), 1000);
+
+                    // alert("Сообщение отправлено");
+                } else {
+                    // Если произошла ошибка
+                    alert("Ошибка. Сообщение не отправлено");
+                }
+                // Если не удалось связаться с php файлом
+            }
+            else {alert("Ошибка сервера. Номер: "+req.status);}};
+
+
+        req.onerror = function () {
+            alert("Ошибка отправки запроса");
+        };
+        req.send(new FormData(event.target));
+
+    }
+
 </script>
 </body>
 </html>
