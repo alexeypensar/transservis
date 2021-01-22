@@ -58,8 +58,8 @@ footerSelect.addEventListener('change', function () {
     // cityPhone4.style.pointerEvents = 'auto';
   } else if (footerSelect.value === 'Moscow') {
     cityAddress.textContent = 'р-н Некрасовка, ул.Вольская 1я, владение 23 стр.4';
-    cityPhone.textContent = '8-985-804-72-82';
-    cityPhone.setAttribute('href', 'tel:+79858047282');
+    cityPhone.textContent = '8-951-390-75-36';
+    cityPhone.setAttribute('href', 'tel:+79513907536');
     cityPhone2.style.visibility = 'hidden';
     cityPhone2.style.pointerEvents = 'none'; // cityPhone3.style.visibility = 'hidden';
     // cityPhone3.style.pointerEvents = 'none';
