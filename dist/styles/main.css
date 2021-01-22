@@ -1401,6 +1401,18 @@ body {
 .footer address {
   margin-bottom: 18px;
 }
+.footer address img {
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
+.contacts__item address img {
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
 .header__type {
   padding-bottom: 35px;
 }
@@ -1842,6 +1854,24 @@ body {
 #modalSuccess .modal__thanks .hystmodal__close {
   right: 25px;
   top: 25px;
+}
+.pensar__link {
+  font-size: 0.75rem;
+  color: #828282;
+}
+.pensar {
+  font-weight: 900;
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: #828282;
+  text-decoration: none;
+}
+.pensar:hover,
+.pensar:focus {
+  background: -webkit-gradient(linear, left top, right top, from(#ff416c), to(#ff4b2b));
+  background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255,255,255,0);
 }
 @media screen and (max-width: 1199.98px) {
   .container {
