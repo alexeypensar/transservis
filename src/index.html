@@ -773,14 +773,14 @@
                 }
                 // Если не удалось связаться с php файлом
             }
-            // else {alert("Ошибка сервера. Номер: "+req.status);}};
+            else {alert("Ошибка сервера. Номер: "+req.status);}};
 
 
             req.onerror = function () {
                 alert("Ошибка отправки запроса");
             };
             req.send(new FormData(event.target));
-        }
+
     }
 
 </script>
