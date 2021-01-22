@@ -82,6 +82,7 @@
   .footer__info_top {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin-bottom: 25px;
   }
   .footer__info_bottom {
     -webkit-box-orient: vertical;
