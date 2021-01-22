@@ -671,6 +671,7 @@ body {
 }
 .pricelist__link {
   border-bottom: 1px solid #0b1f3e;
+  text-decoration: none;
 }
 .pricelist__link:hover,
 .pricelist__link:focus {
@@ -1402,15 +1403,15 @@ body {
   margin-bottom: 18px;
 }
 .footer address img {
-  width: 24px;
+  width: 34px;
   height: 24px;
-  max-width: 24px;
+  max-width: 34px;
   max-height: 24px;
 }
 .contacts__item address img {
-  width: 24px;
+  width: 34px;
   height: 24px;
-  max-width: 24px;
+  max-width: 34px;
   max-height: 24px;
 }
 .header__type {

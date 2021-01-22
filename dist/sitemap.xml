@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+		<url>
+			<loc>https://transservis-tk.ru/</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/index.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/auto.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/air.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/river.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/railway.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/multimodal.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/about-us.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/documents.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/questions.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/prices.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/contacts.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+		<url>
+			<loc>https://transservis-tk.ru/policy.html</loc>
+			<changefreq>daily</changefreq>
+		</url>
+
+	</urlset>
+

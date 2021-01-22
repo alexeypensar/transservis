@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /PHPMailer/
+Sitemap: https://transservis-tk.ru/sitemap.xml
