@@ -180,9 +180,9 @@
                 <h2>Оставьте заявку</h2>
                 <p>Мы свяжемся с Вами в ближайшее время!</p>
                 <label for="modalName" class="visually-hidden">Ваше имя:</label>
-                <input type="text" id="modalName" name="name" placeholder="Ваше имя">
+                <input type="text" id="modalName" name="name" placeholder="Ваше имя" required>
                 <label for="modalPhone" class="visually-hidden">Ваш телефон:</label>
-                <input type="tel" name="phone" id="modalPhone" placeholder="Ваш телефон">
+                <input type="tel" name="phone" id="modalPhone" placeholder="Ваш телефон" required>
                 <label for="modalTextarea" class="visually-hidden">Комментарий:</label>
                 <textarea name="comment" id="modalTextarea" cols="30" rows="10">Комментарий</textarea>
 
@@ -393,7 +393,7 @@
                 <article class="services__item">
                     <h3 class="services__heading">Авиаперевозки грузов</h3>
                     <img src="img/icons/services-aero.svg" alt="Авиатранспорт">
-                    <p class="services__description">Мы являеся генеральным агентом авиакомпании "Полярные Авиалинии", что позволяет максимально оперативно доставлять грузы.</p>
+                    <p class="services__description">Самый быстрый способ доставки ваших грузов получателю.</p>
                     <a href="air.html" class="services__link">подробнее</a>
                 </article>
 
@@ -467,11 +467,9 @@
 
         <div class="calculator__inputs_numbers callback__inputs">
             <label for="callbackName" class="visually-hidden">Ваше имя:</label>
-            <input type="text" id="callbackName" name="name" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
-                   step="1">
+            <input type="text" id="callbackName" name="name" class="calculator__input calculator__input_weight" placeholder="Ваше имя" required>
             <label for="callbackPhone" class="visually-hidden">Ваш телефон:</label>
-            <input type="tel" id="callbackPhone" name="phone" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
-                   step="0.01">
+            <input type="tel" id="callbackPhone" name="phone" class="calculator__input calculator__input_volume" placeholder="Ваш телефон" required>
 
 
             <button class="main-button" type="submit">Отправить

@@ -121,9 +121,9 @@
                 <h2>Оставьте заявку</h2>
                 <p>Мы свяжемся с Вами в ближайшее время!</p>
                 <label for="modalName" class="visually-hidden">Ваше имя:</label>
-                <input type="text" id="modalName" name="name" placeholder="Ваше имя">
+                <input type="text" id="modalName" name="name" placeholder="Ваше имя" required>
                 <label for="modalPhone" class="visually-hidden">Ваш телефон:</label>
-                <input type="tel" name="phone" id="modalPhone" placeholder="Ваш телефон">
+                <input type="tel" name="phone" id="modalPhone" placeholder="Ваш телефон" required>
                 <label for="modalTextarea" class="visually-hidden">Комментарий:</label>
                 <textarea name="comment" id="modalTextarea" cols="30" rows="10">Комментарий</textarea>
 
@@ -244,11 +244,9 @@
 
         <div class="calculator__inputs_numbers callback__inputs">
             <label for="callbackName" class="visually-hidden">Ваше имя:</label>
-            <input type="text" id="callbackName" name="name" class="calculator__input calculator__input_weight" placeholder="Ваше имя"
-                   step="1">
+            <input type="text" id="callbackName" name="name" class="calculator__input calculator__input_weight" placeholder="Ваше имя" required>
             <label for="callbackPhone" class="visually-hidden">Ваш телефон:</label>
-            <input type="tel" id="callbackPhone" name="phone" class="calculator__input calculator__input_volume" placeholder="Ваш телефон"
-                   step="0.01">
+            <input type="tel" id="callbackPhone" name="phone" class="calculator__input calculator__input_volume" placeholder="Ваш телефон" required>
 
 
             <button class="main-button" type="submit">Отправить
