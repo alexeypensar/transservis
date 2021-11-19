@@ -41,7 +41,7 @@ try {
 
     $mail->CharSet = "UTF-8";
     $mail->Username = 'trans-servis-website@yandex.ru';
-    $mail->Password = '27continentstK';
+    $mail->Password = '***'; // add password here
 
 
     $mail->setFrom('trans-servis-website@yandex.ru', 'Транс-Сервис'); // Адрес самой почты и имя отправителя
